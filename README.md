@@ -50,6 +50,10 @@ Our public-facing plan is structured in the following phases:
 3.  **Phase 3: Benchmark / Evaluation Artifacts**: Release of public benchmarks and additional evaluation artifacts.
 4.  **Phase 4: Optional Papers / Public Notes**: Publication of research papers or public notes detailing advanced findings and methodologies.
 
+## Current Research Surface
+
+A sanitized public research note is available at `docs/studies/v1-7-public-note.md`. Citation guidance is available at `docs/citation.md`, and release history is tracked in `docs/changelog.md`.
+
 ## Contact & Future Updates
 
 This project is under active development. For future updates, please watch this repository. Contact information will be made available as the project matures.

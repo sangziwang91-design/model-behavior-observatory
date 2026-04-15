@@ -54,6 +54,10 @@ Our public-facing plan is structured in the following phases:
 
 A sanitized public research note is available at `docs/studies/v1-7-public-note.md`. Citation guidance is available at `docs/citation.md`, and release history is tracked in `docs/changelog.md`.
 
+## Public Testing Workspace
+
+The public testing workspace initialized in this repository now includes a first-round input area, reporting templates, result placeholders, benchmark surface files, and public surface drafts.
+
 ## Contact & Future Updates
 
 This project is under active development. For future updates, please watch this repository. Contact information will be made available as the project matures.

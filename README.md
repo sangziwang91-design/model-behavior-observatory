@@ -52,7 +52,7 @@ Our public-facing plan is structured in the following phases:
 
 ## Current Research Surface
 
-A sanitized public research note is available at `docs/studies/v1-7-public-note.md`. Citation guidance is available at `docs/citation.md`, and release history is tracked in `docs/changelog.md`.
+A sanitized public research note is available at `docs/studies/v1-7-public-note.md`. A concept note on Generative Behavior Structure (Meta-layer) is available at `docs/studies/gbs-meta-layer-concept-note.md`. Citation guidance is available at `docs/citation.md`, and release history is tracked in `docs/changelog.md`.
 
 ## Public Testing Workspace
 

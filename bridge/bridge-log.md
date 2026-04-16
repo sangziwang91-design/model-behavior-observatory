@@ -32,3 +32,15 @@ This file records all bridge validation and release actions between Notion (inte
 ---
 
 > Note: This file intentionally excludes internal control logic, scoring systems, thresholds, or reconstruction paths.
+
+### Bridge Validation #002
+- Name: Bridge Validation #002
+- Direction: GitHub→Notion
+- Action Type: Sync Check
+- Status: Checked
+- Source: model-behavior-observatory / README.md / GitHub Pages
+- Target: GitHub Bridge · Public Window (Notion)
+- Release Tier: P0
+- Notes: Reverse-direction validation executed. No structural drift detected. Public layer remains aligned with Notion bridge definition. No leakage or expansion observed.
+
+---

@@ -8,7 +8,7 @@ This repository documents a public evaluation surface for making that mismatch v
 
 Choose the path that fits your reading time and depth:
 
-- **General reader (5–10 minutes)** → start with `docs/findings/what-we-found.md`, then `docs/overview.md`
+- **General reader (5–10 minutes)** → start with `docs/findings/what-we-found.md`, then `docs/findings/f1-confidence-gap.md`, then `docs/findings/f6-silence-default.md`, then `docs/overview.md`
 - **Research-facing reader (10 minutes)** → read `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-ab-snapshot.md`, then `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
 - **Concept / meta-layer reader (10 minutes)** → read `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
 
@@ -29,6 +29,8 @@ Currently available public materials include:
 
 - `README.md` — repository entry and disclosure boundary
 - `docs/findings/what-we-found.md` — public findings summary
+- `docs/findings/f1-confidence-gap.md` — finding page on confidence outrunning securely available truth
+- `docs/findings/f6-silence-default.md` — finding page on gap-filling under weakened boundary retention
 - `docs/overview.md` — public evaluation surface and scope
 - `docs/known-limits.md` — method boundary and self-reference ceiling
 - `docs/scope-and-disclosure.md` — public disclosure boundary and intentional partial-release logic

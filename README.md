@@ -1,67 +1,80 @@
-> This repository is a **public-facing evaluation window** for model behavior, not a full internal control core or a leaked private system. For more details, see `docs/what-this-is-not.md`.
-
 # Model Behavior Observatory
 
-This repository serves as a **public-facing evaluation window** for understanding and analyzing the behavior of large language models (LLMs). It provides structured methodologies and artifacts for **LLM evaluation**, focusing on observable **model behavior**, **drift detection**, and **failure analysis**. Our aim is to establish a transparent and **protocol-oriented observation** surface that aids in improving **agent reliability** and supports **red teaming** efforts within an **evaluation framework**.
+AI often sounds confident when it should be uncertain.
 
-## What this repository is
+This repository documents a protocol for making that mismatch visible.
 
-This project offers a clear, non-exaggerated view into our approach to:
+## Start here
 
-*   **Model Behavior Evaluation**: Systematic observation and documentation of how LLMs respond under various conditions.
-*   **Drift Detection**: Identifying and characterizing changes in model behavior over time.
-*   **Failure Analysis**: Detailed examination of instances where models fail to meet expectations.
-*   **AI Observability**: Providing structured methods for observing and documenting LLM interactions to ensure consistency and reproducibility.
+Choose the path that fits your reading time and depth:
 
-## What it helps evaluate
+- **Curious reader (10 minutes)** → start with `docs/overview.md`, then `docs/findings/f1-confidence-gap.md`, then `docs/findings/f6-silence-default.md`
+- **Technical reader (10–15 minutes)** → start with `docs/method/protocol-overview.md`, then `docs/method/scoring-dimensions.md`, then `docs/reports/20-round-ab-summary.md`
+- **Researcher / journalist (15 minutes)** → start with `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-single-group-summary.md`
 
-The structures and examples within this repository are designed to help evaluate:
+## What this repository shows
 
-| Aspect                 | Description                                                                                                                            |
-| :--------------------- | :------------------------------------------------------------------------------------------------------------------------------------- |
-| **Behavioral Profiles**  | Comprehensive descriptions of an LLM's characteristic responses, tendencies, and operational patterns.                                   |
-| **Drift & Disagreement** | Detecting subtle changes in a model's output over time or inconsistencies between different models.                                      |
-| **Failure Patterns**     | Classifying and understanding the common ways in which models fail on specific tasks.                                                    |
-| **Observable Structures**| Analyzing the explicit, observable components of a model's reasoning and response generation process, without revealing internal mechanisms. |
+This is a public-facing evaluation window for model behavior.
 
-## Current public artifacts
+It focuses on one practical problem:
 
-This repository currently provides:
+> Models can produce high-confidence outputs even when reliable truth is not securely available.
 
-*   `/docs`: Core documentation including an overview, glossary, public roadmap, report templates, use cases, and a clear statement of what this project is not.
-*   `/examples`: Concrete examples of evaluation cases, behavior reports, and failure taxonomies.
-*   `README.md`: This document.
+The work here does **not** claim to fix that problem.
+It makes the problem easier to see, compare, and discuss.
 
-## What is intentionally not public
+## Core public findings
 
-To maintain the integrity and security of our core systems, the following aspects are intentionally **not** disclosed in this public repository:
+- **F1 — Confidence gap**: a model can sound more certain than the evidence warrants
+- **F6 — Silence default**: when uncertainty handling fails, the model often fills the gap instead of holding the boundary
+- **A/B reframing**: the protocol is an observation instrument, not a remediation layer
 
-*   **Private Control Logic**: Any code or logic related to internal gates, selectors, routing, or system coupling.
-*   **Sensitive Data**: Private thresholds, proprietary test sets, or internal trigger keys.
-*   **Core Implementation**: The source code for our core control systems, the full dependency graph of our internal experimental libraries, or any operational pathways that could directly reproduce the core internal systems.
-*   **Reverse-Engineerable Content**: Any information that could be used to reverse-engineer or replicate our internal "Shadow Core" system.
+## What this repository is not
 
-## Near-term roadmap
+This is **not**:
 
-Our public-facing plan is structured in the following phases:
+- a full internal control core
+- a leaked private system
+- a patch, defense, or alignment fix
+- a claim that current AI is universally broken
 
-1.  **Phase 1: Public Repository Window**: Establishment of this public repository as the initial transparent interface.
-2.  **Phase 2: Report Examples**: Expansion of example reports and case studies to demonstrate practical application.
-3.  **Phase 3: Benchmark / Evaluation Artifacts**: Release of public benchmarks and additional evaluation artifacts.
-4.  **Phase 4: Optional Papers / Public Notes**: Publication of research papers or public notes detailing advanced findings and methodologies.
+It is a structured public surface for observing how models behave when uncertainty pressure rises.
 
-## Current Research Surface
+## Why it matters
 
-A sanitized public research note is available at `docs/studies/v1-7-public-note.md`. A concept note on Generative Behavior Structure (Meta-layer) is available at `docs/studies/gbs-meta-layer-concept-note.md`. Citation guidance is available at `docs/citation.md`, and release history is tracked in `docs/changelog.md`.
+Most users treat model confidence as a rough signal of reliability.
+That shortcut is often wrong.
 
-## Public Testing Workspace
+This repository is built to make that visible in a way that is:
 
-The public testing workspace initialized in this repository now includes a first-round input area, reporting templates, result placeholders, benchmark surface files, and public surface drafts.
+- readable to non-specialists
+- structured enough for technical readers
+- explicit enough for researchers and journalists to audit the limits
 
-## Contact & Future Updates
+## Public structure
 
-This project is under active development. For future updates, please watch this repository. Contact information will be made available as the project matures.
+- `docs/findings/` — reader-facing findings and reframing documents
+- `docs/method/` — protocol overview, scenario design, scoring dimensions, and known limits
+- `docs/reports/` — 20-round summaries and aggregate results
 
----
+## Disclosure boundary
 
-> **Note**: This is the active public-facing repository. All future public updates and evaluation artifacts will appear here.
+Some implementation details are intentionally withheld.
+
+The order of reasons is simple:
+
+1. reproducibility boundary
+2. misuse risk
+3. commercial protection
+
+The goal is to keep the public layer legible without exposing details that would make the protocol easier to misuse, imitate superficially, or reverse-engineer into internal systems.
+
+## Research surface
+
+A sanitized public research note is available at `docs/studies/v1-7-public-note.md`.
+A concept note on Generative Behavior Structure (Meta-layer) is available at `docs/studies/gbs-meta-layer-concept-note.md`.
+
+## Current status
+
+This is the active public-facing repository.
+Future public updates, examples, and research-facing materials will continue here.

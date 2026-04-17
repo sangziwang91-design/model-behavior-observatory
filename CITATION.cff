@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+title: Model Behavior Observatory
+message: "If you use this repository, please cite it as below."
+type: software
+authors:
+  - family-names: Wang
+    given-names: SangZi
+    affiliation: Independent Research
+version: 0.1.0
+date-released: 2026-04-17
+url: https://github.com/sangziwang91-design/model-behavior-observatory
+abstract: >
+  A public evaluation surface for observing how large language models behave
+  under uncertainty, focusing on the gap between confidence signals and
+  underlying reliability.
+keywords:
+  - LLM
+  - AI evaluation
+  - uncertainty
+  - model behavior
+  - observability
+license: MIT

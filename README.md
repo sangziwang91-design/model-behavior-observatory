@@ -6,11 +6,15 @@ This repository documents a public evaluation surface for making that mismatch v
 
 ## Start here
 
+If you only read one page first, read:
+
+- `docs/start-here.md`
+
 Choose the path that fits your reading time and depth:
 
-- **General reader (5–10 minutes)** → start with `docs/findings/what-we-found.md`, then `docs/findings/f1-confidence-gap.md`, then `docs/findings/f2-structure-outruns-evidence.md`, then `docs/findings/f3-premature-legitimacy.md`, then `docs/findings/f4-observation-not-remediation.md`, then `docs/findings/f6-silence-default.md`, then `docs/overview.md`
-- **Research-facing reader (10 minutes)** → read `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-ab-snapshot.md`, then `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
-- **Concept / meta-layer reader (10 minutes)** → read `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
+- **General reader (5–10 minutes)** → start with `docs/start-here.md`, then `docs/findings/what-we-found.md`, then `docs/overview.md`
+- **Research-facing reader (10 minutes)** → read `docs/start-here.md`, then `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-ab-snapshot.md`, then `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
+- **Concept / meta-layer reader (10 minutes)** → read `docs/start-here.md`, then `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
 
 ## What this repository shows
 
@@ -28,6 +32,7 @@ It makes the problem easier to see, compare, and discuss.
 Currently available public materials include:
 
 - `README.md` — repository entry and disclosure boundary
+- `docs/start-here.md` — guided public reading map for different readers
 - `docs/findings/what-we-found.md` — public findings summary
 - `docs/findings/f1-confidence-gap.md` — finding page on confidence outrunning securely available truth
 - `docs/findings/f2-structure-outruns-evidence.md` — finding page on explanatory structure arriving before secure grounding

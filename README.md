@@ -8,9 +8,9 @@ This repository documents a public evaluation surface for making that mismatch v
 
 Choose the path that fits your reading time and depth:
 
-- **General reader (5–10 minutes)** → start with `docs/overview.md`
-- **Research-facing reader (10 minutes)** → read `docs/studies/v1-7-public-note.md`
-- **Concept / meta-layer reader (10 minutes)** → read `docs/studies/gbs-meta-layer-concept-note.md`
+- **General reader (5–10 minutes)** → start with `docs/findings/what-we-found.md`, then `docs/overview.md`
+- **Research-facing reader (10 minutes)** → read `docs/known-limits.md`, then `docs/reports/20-round-ab-snapshot.md`
+- **Concept / meta-layer reader (10 minutes)** → read `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
 
 ## What this repository shows
 
@@ -28,11 +28,13 @@ It makes the problem easier to see, compare, and discuss.
 Currently available public materials include:
 
 - `README.md` — repository entry and disclosure boundary
+- `docs/findings/what-we-found.md` — public findings summary
 - `docs/overview.md` — public evaluation surface and scope
+- `docs/known-limits.md` — method boundary and self-reference ceiling
+- `docs/reports/20-round-ab-snapshot.md` — public-safe A/B comparison snapshot
+- `docs/public-evidence-chain.md` — release flow and evidence chain note
 - `docs/studies/v1-7-public-note.md` — sanitized public research note
 - `docs/studies/gbs-meta-layer-concept-note.md` — concept note on Generative Behavior Structure (Meta-layer)
-
-Additional public findings, method notes, and report summaries may be added in later updates.
 
 ## What this repository is not
 

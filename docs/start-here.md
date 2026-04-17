@@ -13,43 +13,45 @@ The core public question is simple:
 This repository does **not** claim to solve that problem.
 It makes the mismatch easier to see, compare, and discuss.
 
-## Pick a reading path
+## Choose a reading path
 
 ### Path A — Fast orientation (5 minutes)
 Use this path if you want the shortest useful introduction.
 
-1. `docs/findings/what-we-found.md`
-2. `docs/findings/f1-confidence-gap.md`
-3. `docs/overview.md`
+1. `overview.md`
+2. `findings/index.md`
+3. `findings/f1-confidence-gap.md`
 
-### Path B — Public findings path (10 minutes)
-Use this path if you want to understand the main public-facing findings.
+### Path B — Findings (10 minutes)
+Use this path if you want the clearest public-facing findings line.
 
-1. `docs/findings/what-we-found.md`
-2. `docs/findings/f1-confidence-gap.md`
-3. `docs/findings/f2-structure-outruns-evidence.md`
-4. `docs/findings/f3-premature-legitimacy.md`
-5. `docs/findings/f4-observation-not-remediation.md`
-6. `docs/findings/f6-silence-default.md`
+1. `findings/index.md`
+2. `findings/f1-confidence-gap.md`
+3. `findings/f2-structure-outruns-evidence.md`
+4. `findings/f3-premature-legitimacy.md`
+5. `findings/f4-observation-not-remediation.md`
+6. `findings/f6-silence-default.md`
 
-### Path C — Boundary and method limits (10 minutes)
+### Path C — Boundaries and method limits (10 minutes)
 Use this path if you want to understand what this repository does **not** claim.
 
-1. `docs/known-limits.md`
-2. `docs/scope-and-disclosure.md`
-3. `docs/public-evidence-chain.md`
+1. `known-limits.md`
+2. `scope-and-disclosure.md`
+3. `public-evidence-chain.md`
 
-### Path D — Snapshot reports (10 minutes)
+### Path D — Report snapshots (10 minutes)
 Use this path if you want public-safe report summaries rather than concept notes.
 
-1. `docs/reports/20-round-ab-snapshot.md`
-2. `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
+1. `reports/index.md`
+2. `reports/20-round-ab-snapshot.md`
+3. `reports/multi-model-behavioral-response-analysis-public-safe.md`
 
 ### Path E — Research-facing notes (10–15 minutes)
-Use this path if you want the more research-facing public layer.
+Use this path if you want the higher-level conceptual layer.
 
-1. `docs/studies/v1-7-public-note.md`
-2. `docs/studies/gbs-meta-layer-concept-note.md`
+1. `studies/index.md`
+2. `studies/v1-7-public-note.md`
+3. `studies/gbs-meta-layer-concept-note.md`
 
 ## What to keep in mind while reading
 
@@ -70,13 +72,13 @@ That is the central gap this repository is designed to make more visible.
 ## If you are reading as...
 
 ### A general reader
-Start with the findings pages.
+Start with `overview.md`, then go into `findings/index.md`.
 
 ### A researcher or journalist
 Start with boundaries first, then read the snapshot reports.
 
 ### A technical reader
-Read findings, then known limits, then the report snapshots.
+Read findings first, then limits, then the report snapshots.
 
 ## What this repository is not
 

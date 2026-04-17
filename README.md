@@ -2,15 +2,15 @@
 
 AI often sounds confident when it should be uncertain.
 
-This repository documents a protocol for making that mismatch visible.
+This repository documents a public evaluation surface for making that mismatch visible.
 
 ## Start here
 
 Choose the path that fits your reading time and depth:
 
-- **Curious reader (10 minutes)** → start with `docs/overview.md`, then `docs/findings/f1-confidence-gap.md`, then `docs/findings/f6-silence-default.md`
-- **Technical reader (10–15 minutes)** → start with `docs/method/protocol-overview.md`, then `docs/method/scoring-dimensions.md`, then `docs/reports/20-round-ab-summary.md`
-- **Researcher / journalist (15 minutes)** → start with `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-single-group-summary.md`
+- **General reader (5–10 minutes)** → start with `docs/overview.md`
+- **Research-facing reader (10 minutes)** → read `docs/studies/v1-7-public-note.md`
+- **Concept / meta-layer reader (10 minutes)** → read `docs/studies/gbs-meta-layer-concept-note.md`
 
 ## What this repository shows
 
@@ -23,11 +23,16 @@ It focuses on one practical problem:
 The work here does **not** claim to fix that problem.
 It makes the problem easier to see, compare, and discuss.
 
-## Core public findings
+## Current public surface
 
-- **F1 — Confidence gap**: a model can sound more certain than the evidence warrants
-- **F6 — Silence default**: when uncertainty handling fails, the model often fills the gap instead of holding the boundary
-- **A/B reframing**: the protocol is an observation instrument, not a remediation layer
+Currently available public materials include:
+
+- `README.md` — repository entry and disclosure boundary
+- `docs/overview.md` — public evaluation surface and scope
+- `docs/studies/v1-7-public-note.md` — sanitized public research note
+- `docs/studies/gbs-meta-layer-concept-note.md` — concept note on Generative Behavior Structure (Meta-layer)
+
+Additional public findings, method notes, and report summaries may be added in later updates.
 
 ## What this repository is not
 
@@ -51,12 +56,6 @@ This repository is built to make that visible in a way that is:
 - structured enough for technical readers
 - explicit enough for researchers and journalists to audit the limits
 
-## Public structure
-
-- `docs/findings/` — reader-facing findings and reframing documents
-- `docs/method/` — protocol overview, scenario design, scoring dimensions, and known limits
-- `docs/reports/` — 20-round summaries and aggregate results
-
 ## Disclosure boundary
 
 Some implementation details are intentionally withheld.
@@ -68,11 +67,6 @@ The order of reasons is simple:
 3. commercial protection
 
 The goal is to keep the public layer legible without exposing details that would make the protocol easier to misuse, imitate superficially, or reverse-engineer into internal systems.
-
-## Research surface
-
-A sanitized public research note is available at `docs/studies/v1-7-public-note.md`.
-A concept note on Generative Behavior Structure (Meta-layer) is available at `docs/studies/gbs-meta-layer-concept-note.md`.
 
 ## Current status
 

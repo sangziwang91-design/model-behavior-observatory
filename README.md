@@ -1,20 +1,27 @@
 # Model Behavior Observatory
 
-AI often sounds confident when it should be uncertain.
+AI can produce structured, confident answers
+ even when secure grounding is not available.
 
-This repository documents a public evaluation surface for making that mismatch visible.
+This repository shows how that happens.
+
+## Minimal evidence
+
+If you only check one thing first, read:
+
+- `docs/reports/core-evidence-entry.md`
 
 ## Start here
 
-If you only read one page first, read:
+Then continue with:
 
 - `docs/start-here.md`
 
 Choose the path that fits your reading time and depth:
 
-- **General reader (5–10 minutes)** → start with `docs/start-here.md`, then `docs/findings/what-we-found.md`, then `docs/overview.md`
-- **Research-facing reader (10 minutes)** → read `docs/start-here.md`, then `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-ab-snapshot.md`, then `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
-- **Concept / meta-layer reader (10 minutes)** → read `docs/start-here.md`, then `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
+- **General reader (5–10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/findings/what-we-found.md`, then `docs/overview.md`
+- **Research-facing reader (10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-ab-snapshot.md`, then `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
+- **Concept / meta-layer reader (10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/findings/behavioral-risk-map.md`, then `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
 
 ## What this repository shows
 
@@ -36,6 +43,7 @@ It makes the problem easier to see, compare, and discuss.
 Currently available public materials include:
 
 - `README.md` — repository entry and disclosure boundary
+- `docs/reports/core-evidence-entry.md` — minimal public-safe evidence entry
 - `docs/start-here.md` — guided public reading map for different readers
 - `docs/findings/what-we-found.md` — public findings summary
 - `docs/findings/f1-confidence-gap.md`
@@ -55,6 +63,9 @@ Currently available public materials include:
 - `docs/scope-and-disclosure.md`
 - `docs/reports/20-round-ab-snapshot.md`
 - `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
+- `docs/reports/evidence-snapshot-boundary-retention.md`
+- `docs/reports/evidence-snapshot-pseudo-consistency.md`
+- `docs/reports/evidence-snapshot-structure-drift.md`
 - `docs/public-evidence-chain.md`
 - `docs/studies/v1-7-public-note.md`
 - `docs/studies/gbs-meta-layer-concept-note.md`

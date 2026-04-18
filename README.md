@@ -39,6 +39,7 @@ Currently available public materials include:
 - `docs/findings/f3-premature-legitimacy.md` — finding page on explanatory structure granting legitimacy too early
 - `docs/findings/f4-observation-not-remediation.md` — finding page clarifying diagnostic visibility versus fix claims
 - `docs/findings/f6-silence-default.md` — finding page on gap-filling under weakened boundary retention
+- `docs/findings/f7-incomplete-input-no-halt.md` — finding page on continuation under incomplete task structure
 - `docs/overview.md` — public evaluation surface and scope
 - `docs/known-limits.md` — method boundary and self-reference ceiling
 - `docs/scope-and-disclosure.md` — public disclosure boundary and intentional partial-release logic

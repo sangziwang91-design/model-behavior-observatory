@@ -5,6 +5,10 @@ Structure drift describes a gradual shift:
 > explanatory structure becomes more defined over time,
 > even when the underlying object remains weakly verified.
 
+## Quick evidence anchor
+
+See: `../reports/evidence-snapshot-structure-drift.md`
+
 ## What it looks like
 
 At early steps, a model may treat a topic as:

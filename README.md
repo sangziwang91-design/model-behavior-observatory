@@ -20,8 +20,8 @@ Then continue with:
 Choose the path that fits your reading time and depth:
 
 - **General reader (5–10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/findings/what-we-found.md`, then `docs/overview.md`
-- **Research-facing reader (10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/20-round-ab-snapshot.md`, then `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
-- **Concept / meta-layer reader (10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/findings/behavioral-risk-map.md`, then `docs/studies/v1-7-public-note.md`, then `docs/studies/gbs-meta-layer-concept-note.md`
+- **Research-facing reader (10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/known-limits.md`, then `docs/scope-and-disclosure.md`, then `docs/reports/`
+- **Concept / meta-layer reader (10 minutes)** → `docs/reports/core-evidence-entry.md`, then `docs/findings/behavioral-risk-map.md`, then `docs/studies/`
 
 ## What this repository shows
 
@@ -43,32 +43,15 @@ It makes the problem easier to see, compare, and discuss.
 Currently available public materials include:
 
 - `README.md` — repository entry and disclosure boundary
-- `docs/reports/core-evidence-entry.md` — minimal public-safe evidence entry
-- `docs/start-here.md` — guided public reading map for different readers
-- `docs/findings/what-we-found.md` — public findings summary
-- `docs/findings/f1-confidence-gap.md`
-- `docs/findings/f2-structure-outruns-evidence.md`
-- `docs/findings/f3-premature-legitimacy.md`
-- `docs/findings/f4-observation-not-remediation.md`
-- `docs/findings/f6-silence-default.md`
-- `docs/findings/f10-boundary-retention.md`
-- `docs/findings/f11-pseudo-consistency.md`
-- `docs/findings/f12-structure-drift.md`
-- `docs/findings/f13-confidence-structure-gap.md`
-- `docs/findings/behavioral-risk-map.md`
-- `docs/findings/index.md`
+- `docs/reports/` — public-safe analysis notes
+- `docs/start-here.md` — guided public reading map
+- `docs/findings/` — observable behavior patterns
 - `docs/overview.md`
 - `docs/forward-path.md`
 - `docs/known-limits.md`
 - `docs/scope-and-disclosure.md`
-- `docs/reports/20-round-ab-snapshot.md`
-- `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
-- `docs/reports/evidence-snapshot-boundary-retention.md`
-- `docs/reports/evidence-snapshot-pseudo-consistency.md`
-- `docs/reports/evidence-snapshot-structure-drift.md`
 - `docs/public-evidence-chain.md`
-- `docs/studies/v1-7-public-note.md`
-- `docs/studies/gbs-meta-layer-concept-note.md`
+- `docs/studies/` — concept notes (limited public scope)
 
 ## Author
 

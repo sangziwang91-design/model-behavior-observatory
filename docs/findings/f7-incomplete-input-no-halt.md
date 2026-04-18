@@ -58,6 +58,17 @@ It defines a public evaluation pattern that can be checked across systems:
 
 The second behavior is the point of concern.
 
+## Public observation status
+
+In repeated public-safe probes, this pattern does not appear as a one-off artifact.
+A recurring outcome is that models often distinguish between:
+
+- what a system **should** do under incomplete input, and
+- what a model **tends** to do in practice under incomplete input.
+
+This does not justify a universal claim.
+It does support treating the phenomenon as a stable behavior pattern worth testing directly.
+
 ## Minimal public reproduction logic
 
 A public-safe reproduction pattern is:

@@ -45,6 +45,14 @@ It presents a bounded public layer for making selected behavior patterns visible
 The goal of this public layer is not full disclosure.
 It is to make selected observable patterns legible, discussable, and citable without exposing internal control logic.
 
+## Findings path
+
+For the current public findings, see:
+
+- `docs/findings/f7-incomplete-input-no-halt.md`
+- `docs/findings/f8-pseudo-consistency.md`
+- `docs/findings/f9-policy-vs-execution-gap.md`
+
 ## Contact
 
 Email: sangziwang91@gmail.com

@@ -15,6 +15,10 @@ If you want the cleanest reading flow, use this order:
 4. `f3-premature-legitimacy.md`
 5. `f4-observation-not-remediation.md`
 6. `f6-silence-default.md`
+7. `f10-boundary-retention.md`
+8. `f11-pseudo-consistency.md`
+9. `f12-structure-drift.md`
+10. `f13-confidence-structure-gap.md`
 
 ## Pages in this section
 
@@ -36,6 +40,18 @@ Why this repository should be read as a diagnostic public surface, not as a fix 
 
 ### F6 — Silence Default
 Why models often continue filling the gap instead of clearly holding the boundary.
+
+### F10 — Boundary Retention
+How well a model keeps unknown objects as unknown instead of prematurely stabilizing them.
+
+### F11 — Pseudo-Consistency
+Why repeated answers can look stable while the underlying reasoning is not.
+
+### F12 — Structure Drift
+How explanatory structure can grow without corresponding evidence.
+
+### F13 — Confidence–Structure Gap
+Why confidence and structure can outpace grounding.
 
 ## How to read these pages correctly
 

@@ -5,6 +5,10 @@ Pseudo-consistency names a misleading stability pattern:
 > a system appears consistent across rounds,
 > but the internal path is not genuinely stable.
 
+## Quick evidence anchor
+
+See: `../reports/evidence-snapshot-pseudo-consistency.md`
+
 What stays stable is often the surface shape,
 not the underlying evidential grounding.
 

@@ -24,6 +24,10 @@ This protocol is designed to expose response behavior.
 It is **not** a patch, defense, or alignment fix.
 Its value is diagnostic visibility.
 
+### F7 — Incomplete input, no halt
+A model may correctly explain that it should stop when task coverage is incomplete — and still continue execution anyway.
+This is a process-level weakness, not just a content error.
+
 ## Why this matters
 
 Most users do not inspect the full path from uncertainty to answer.

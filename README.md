@@ -27,6 +27,10 @@ It focuses on one practical problem:
 The work here does **not** claim to fix that problem.
 It makes the problem easier to see, compare, and discuss.
 
+## Behavioral map (quick orientation)
+
+- `docs/findings/behavioral-risk-map.md`
+
 ## Current public surface
 
 Currently available public materials include:
@@ -39,9 +43,11 @@ Currently available public materials include:
 - `docs/findings/f3-premature-legitimacy.md`
 - `docs/findings/f4-observation-not-remediation.md`
 - `docs/findings/f6-silence-default.md`
-- `docs/findings/f7-incomplete-input-no-halt.md`
-- `docs/findings/f8-pseudo-consistency.md`
-- `docs/findings/f9-policy-vs-execution-gap.md`
+- `docs/findings/f10-boundary-retention.md`
+- `docs/findings/f11-pseudo-consistency.md`
+- `docs/findings/f12-structure-drift.md`
+- `docs/findings/f13-confidence-structure-gap.md`
+- `docs/findings/behavioral-risk-map.md`
 - `docs/findings/index.md`
 - `docs/overview.md`
 - `docs/forward-path.md`

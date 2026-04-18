@@ -5,6 +5,10 @@ Boundary retention names a simple but important behavior:
 > how well a model keeps the status of an unknown object as unknown
 > instead of prematurely converting it into a discussable framework.
 
+## Quick evidence anchor
+
+See: `../reports/evidence-snapshot-boundary-retention.md`
+
 ## Why this matters
 
 Many model failures do not begin with an obvious false citation or a direct invented claim.

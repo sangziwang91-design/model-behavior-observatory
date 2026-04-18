@@ -34,20 +34,29 @@ Currently available public materials include:
 - `README.md` — repository entry and disclosure boundary
 - `docs/start-here.md` — guided public reading map for different readers
 - `docs/findings/what-we-found.md` — public findings summary
-- `docs/findings/f1-confidence-gap.md` — finding page on confidence outrunning securely available truth
-- `docs/findings/f2-structure-outruns-evidence.md` — finding page on explanatory structure arriving before secure grounding
-- `docs/findings/f3-premature-legitimacy.md` — finding page on explanatory structure granting legitimacy too early
-- `docs/findings/f4-observation-not-remediation.md` — finding page clarifying diagnostic visibility versus fix claims
-- `docs/findings/f6-silence-default.md` — finding page on gap-filling under weakened boundary retention
-- `docs/findings/f7-incomplete-input-no-halt.md` — finding page on continuation under incomplete task structure and policy-expression versus execution mismatch
-- `docs/overview.md` — public evaluation surface and scope
-- `docs/known-limits.md` — method boundary and self-reference ceiling
-- `docs/scope-and-disclosure.md` — public disclosure boundary and intentional partial-release logic
-- `docs/reports/20-round-ab-snapshot.md` — public-safe A/B comparison snapshot
-- `docs/reports/multi-model-behavioral-response-analysis-public-safe.md` — public-safe cross-system comparison report
-- `docs/public-evidence-chain.md` — release flow and evidence chain note
-- `docs/studies/v1-7-public-note.md` — sanitized public research note
-- `docs/studies/gbs-meta-layer-concept-note.md` — concept note on Generative Behavior Structure (Meta-layer)
+- `docs/findings/f1-confidence-gap.md`
+- `docs/findings/f2-structure-outruns-evidence.md`
+- `docs/findings/f3-premature-legitimacy.md`
+- `docs/findings/f4-observation-not-remediation.md`
+- `docs/findings/f6-silence-default.md`
+- `docs/findings/f7-incomplete-input-no-halt.md`
+- `docs/findings/f8-pseudo-consistency.md`
+- `docs/findings/f9-policy-vs-execution-gap.md`
+- `docs/findings/index.md`
+- `docs/overview.md`
+- `docs/forward-path.md`
+- `docs/known-limits.md`
+- `docs/scope-and-disclosure.md`
+- `docs/reports/20-round-ab-snapshot.md`
+- `docs/reports/multi-model-behavioral-response-analysis-public-safe.md`
+- `docs/public-evidence-chain.md`
+- `docs/studies/v1-7-public-note.md`
+- `docs/studies/gbs-meta-layer-concept-note.md`
+
+## Author
+
+SangZi Wang  
+Email: sangziwang91@gmail.com
 
 ## What this repository is not
 

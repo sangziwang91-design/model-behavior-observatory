@@ -21,3 +21,9 @@ To set clear expectations, it is important to clarify what this public repositor
 - **Not a general-purpose prompt pack**: This is not a collection intended for general prompt engineering or optimizing LLM performance across various tasks.
 
 Instead, **this is a public-facing evaluation window** designed to foster transparency and collaboration around LLM behavior analysis, drift detection, and failure patterns.
+
+## Public direction
+
+For the release discipline and future-facing public path of this repository, see:
+
+- `docs/forward-path.md`

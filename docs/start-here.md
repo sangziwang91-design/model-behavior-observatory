@@ -13,6 +13,15 @@ The core public question is simple:
 This repository does **not** claim to solve that problem.
 It makes the mismatch easier to see, compare, and discuss.
 
+## Benchmark reading path
+
+If you want the fastest way to understand the public benchmark signals:
+
+1. `findings/what-we-found.md`
+2. `findings/f11-pseudo-consistency.md`
+3. `findings/f12-structure-drift.md`
+4. `reports/20-round-ab-snapshot.md`
+
 ## Choose a reading path
 
 ### Path A — Fast orientation (5 minutes)

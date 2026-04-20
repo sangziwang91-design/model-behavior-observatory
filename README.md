@@ -8,6 +8,26 @@ This repository makes that visible — and comparable.
 
 ---
 
+## 🔴 Latest Study (2026-04-20)
+
+**Miaoxiang AI — System Surface Generation under Authority Framing**
+
+- Surface Layer Study → `docs/studies/miaoxiang-surface-layers.md`
+- Case Report → `docs/reports/miaoxiang-case-report.md`
+
+This study documents how a model can generate:
+
+- system-like states
+- execution-chain narratives
+- internal documentation surfaces
+- DevOps-style configuration outputs
+- knowledge-base-like sources
+- self-validation (audit-style) outputs
+
+without establishing verified grounding.
+
+---
+
 ## What this is
 
 A **bounded public benchmark-facing surface** for observing how language models behave when input is incomplete, task structure is partial, or reliable grounding is weaker than the answer suggests.

@@ -1,10 +1,18 @@
 # Model Behavior Observatory
 
-`Bounded Public Benchmark Surface` · `Behavior Under Uncertainty` · `Public Signals`
+`Bounded Public Benchmark Surface` · `Behavior Under Uncertainty` · `Structured Illusion` · `Public Signals`
 
-AI can sound confident even when it should not.
+AI does not only hallucinate isolated facts.
 
-This repository makes that visible — and comparable.
+Under the right framing, it can assemble **credible technical worlds**:
+
+- systems that seem to exist
+- documents that seem internal
+- deployment notes that seem operational
+- sources that seem grounded
+- audits that seem verified
+
+This repository studies that boundary.
 
 ---
 
@@ -14,8 +22,11 @@ This repository makes that visible — and comparable.
 
 - Surface Layer Study → `docs/studies/miaoxiang-surface-layers.md`
 - Case Report → `docs/reports/miaoxiang-case-report.md`
+- Benchmark v0.1 → `docs/benchmark/miaoxiang-benchmark-v0.1.md`
+- Cross-Model Scorecard → `docs/benchmark/cross-model-surface-scorecard-template.md`
+- Finding Note → `docs/findings/structured-illusion-under-constraint.md`
 
-This study documents how a model can generate:
+This study tracks how a model can generate:
 
 - system-like states
 - execution-chain narratives
@@ -23,6 +34,7 @@ This study documents how a model can generate:
 - DevOps-style configuration outputs
 - knowledge-base-like sources
 - self-validation (audit-style) outputs
+- collapse under forced grounding constraints
 
 without establishing verified grounding.
 
@@ -30,11 +42,32 @@ without establishing verified grounding.
 
 ## What this is
 
-A **bounded public benchmark-facing surface** for observing how language models behave when input is incomplete, task structure is partial, or reliable grounding is weaker than the answer suggests.
+A **bounded public benchmark-facing surface** for observing how language models behave when:
+
+- input is incomplete
+- grounding is weak
+- authority framing is introduced
+- technical plausibility begins to outrun verification
 
 It focuses on one practical question:
 
 > What do models actually do when they should slow down, verify, or stop?
+
+And one harder question beneath it:
+
+> What happens when a model begins to sound more like a system than a model?
+
+---
+
+## Core Observation
+
+Many model failures are not simple factual errors.
+
+Some are **structured illusions**:
+
+> coherent technical outputs that look like real systems, rules, pipelines, deployments, or source-backed environments — even when the model has not established that those structures correspond to reality.
+
+This repository tracks those patterns in a public-safe way.
 
 ---
 
@@ -56,6 +89,8 @@ This repository tracks observable behavioral signals under uncertainty across:
 - confidence–evidence mismatch
 - disagreement and drift
 - policy-expression versus execution behavior
+- authority-surface generation
+- structured illusion under constraint
 
 ---
 
@@ -68,10 +103,32 @@ This public layer highlights recurring behavior patterns such as:
 - structure drift
 - premature legitimacy
 - silence default
+- surface escalation
+- source substitution
+- self-validation tendency
+- collapse under forced grounding
 
 See:
 
 - `docs/findings/`
+- `docs/reports/`
+- `docs/studies/`
+
+---
+
+## System Overview
+
+This repository treats LLM interaction as a layered control-observation problem:
+
+- **L1 — Reality Check**: collapse, verification, forced grounding
+- **L2 — Behavior Structure**: templates, attractors, slot filling, surface formation
+- **L3 — Runtime Flow**: drift, repair, escalation, loop behavior
+- **L4 — Control Layer**: bounded protocol and behavioral pressure
+- **L5 — Application Layer**: only outputs that survive lower-layer checks
+
+Key principle:
+
+> No output is considered valid unless it survives collapse testing at L1.
 
 ---
 
@@ -83,6 +140,8 @@ This repository is intended to support:
 - report-safe evidence framing
 - external citation
 - bounded benchmark reference
+- structured-illusion detection
+- public-safe discussion of verification gaps
 
 ---
 
@@ -96,11 +155,15 @@ A harder and often more important question is:
 
 > Should the model have answered at all?
 
-This repository helps make that difference visible.
+And an even harder one:
+
+> Is this answer grounded — or only convincingly shaped?
+
+This repository is built around that distinction.
 
 ---
 
-## Public scope
+## Public Scope
 
 This is a **bounded public layer**.
 
@@ -109,6 +172,7 @@ It is designed to make selected behavior patterns:
 - legible
 - discussable
 - citable
+- benchmarkable
 
 without exposing:
 
@@ -116,6 +180,7 @@ without exposing:
 - private evaluation pipelines
 - reverse-engineerable system structure
 - hidden scoring thresholds
+- trigger chains
 - reconstruction paths
 
 ---
@@ -125,6 +190,7 @@ without exposing:
 - `docs/findings/` — observable behavior patterns
 - `docs/reports/` — public-safe analysis notes
 - `docs/studies/` — limited-scope concept notes
+- `docs/benchmark/` — benchmark-facing materials
 - `docs/benchmark-scope.md` — benchmark boundary and signal definition
 - `docs/forward-path.md` — release discipline and public direction
 - `docs/about.md` — external introduction
@@ -149,4 +215,4 @@ Focused on careful, incremental public benchmark release.
 
 This is not a product, framework, or alignment solution.
 
-It is a bounded public benchmark surface.
+It is a bounded public benchmark surface for making technical plausibility visible — and separable from verified reality.

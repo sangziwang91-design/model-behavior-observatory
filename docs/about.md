@@ -4,6 +4,8 @@
 
 Independent researcher working on observable model behavior under uncertainty.
 
+This repository is the current public benchmark-facing surface of SangZi Wang’s work on observable model behavior under uncertainty.
+
 This public repository is a bounded release surface focused on:
 
 - behavior patterns under incomplete input

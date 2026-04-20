@@ -1,5 +1,25 @@
 # Findings
 
+## Public Benchmark Signals
+
+The findings in this section can be read as **bounded benchmark signals** for observable model behavior under uncertainty.
+
+They are:
+
+- not full internal metrics  
+- not raw experimental dumps  
+
+They are:
+
+- comparable  
+- citable  
+- discussable  
+- report-safe  
+
+These signals enable external understanding without exposing internal control logic.
+
+---
+
 This section collects the public-safe findings pages in one place.
 
 These pages are written for external reading.

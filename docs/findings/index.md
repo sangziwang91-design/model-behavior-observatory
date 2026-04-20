@@ -39,6 +39,7 @@ If you want the cleanest reading flow, use this order:
 8. `f11-pseudo-consistency.md`
 9. `f12-structure-drift.md`
 10. `f13-confidence-structure-gap.md`
+11. `f14-synthetic-system-scoring.md`
 
 ## Pages in this section
 
@@ -72,6 +73,9 @@ How explanatory structure can grow without corresponding evidence.
 
 ### F13 — Confidence–Structure Gap
 Why confidence and structure can outpace grounding.
+
+### F14 — Synthetic System Scoring
+Why a model can present system-like text plus audit-like scoring as if external validation had already occurred.
 
 ## How to read these pages correctly
 

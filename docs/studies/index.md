@@ -1,28 +1,98 @@
-# Studies
+# Studies Index
 
-This section collects the public research-facing notes.
+## Overview
 
-These pages are lighter than internal research documents and safer than full technical disclosure.
-They are intended for readers who want the conceptual layer without crossing into protected internal mechanics.
+This page organizes all public-safe study notes into a unified navigation layer.
 
-## Pages in this section
+It allows readers to follow the behavior-structure research line without exposing:
 
-### V1.7 Public Note
-A sanitized public research note that explains the public-facing logic of the V1.7 line without exposing protected internal structure.
+- private prompts  
+- control protocols  
+- reconstruction paths  
 
-### Generative Behavior Structure (Meta-layer) · Concept Note
-A concept note on generation paths, pseudo-attractors, and entropy-preserving attractors.
+---
 
-## How to read this section
+## Reading Paths
 
-Use these pages when you want:
+### A · Structured Illusion Basics
+Understand how outputs become convincing without verified grounding.
 
-- research-facing framing
-- conceptual language
-- higher-level interpretation
+- synthetic-legitimacy.md  
+- illusion-stack.md  
 
-Do not treat these pages as:
+---
 
-- full methodology disclosure
-- internal protocol export
-- complete reproducibility packages
+### B · Recursive Validation Layers
+Understand how models simulate evaluation, self-review, and defense framing.
+
+- recursive-self-audit-illusion.md  
+- self-defense-illusion.md  
+- illusion-stack.md  
+
+---
+
+### C · Operational Appearance Risk
+Understand how outputs resemble executable or system-level procedures without real execution grounding.
+
+- operational-illusion-layer.md  
+- synthetic-legitimacy.md  
+- illusion-stack.md  
+
+---
+
+### D · Stability and Drift
+Understand how outputs appear stable while their internal structure shifts.
+
+- pseudo-consistency.md  
+- illusion-stack.md  
+- synthetic-legitimacy.md  
+
+---
+
+## Study Set
+
+- Recursive Self-Audit Illusion  
+- Self-Defense Illusion  
+- Illusion Stack  
+- Synthetic Legitimacy  
+- Pseudo-Consistency  
+- Operational Illusion Layer  
+
+---
+
+## How to Use This Section
+
+These materials are:
+
+- observable behavior notes  
+- benchmark-facing signals  
+- public-safe abstractions  
+
+They are not:
+
+- exploit instructions  
+- system operation guides  
+- internal architecture disclosure  
+
+---
+
+## Boundary
+
+This section does not include:
+
+- prompt engineering methods  
+- system control mechanisms  
+- executable pipelines  
+- reconstruction paths  
+
+It organizes only public-safe research surfaces.
+
+---
+
+## Position
+
+This page acts as:
+
+navigation layer → not knowledge core
+
+Core mechanisms are intentionally not exposed.

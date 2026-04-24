@@ -1,27 +1,96 @@
 # Public Roadmap
 
-This roadmap outlines the planned public-facing development phases for this repository. It focuses exclusively on the external contributions and artifacts that will be made available to the community, without detailing internal project timelines or core development plans.
+This page describes the bounded public direction of this repository.
+
+It focuses on external-facing experiment reports and observation notes only. It does not publish internal system architecture, control methods, private scoring logic, or any reconstructive workflow.
+
+---
 
 ## Phase 1: Public Repository Window
 
-*   **Objective**: Establish the foundational public presence for our LLM evaluation efforts.
-*   **Deliverables**: Initial GitHub repository, comprehensive `README.md`, core `docs` (overview, glossary), and initial `examples` of evaluation structures.
-*   **Status**: Completed.
+**Objective:** establish a public, citable window for selected LLM behavior observations.
 
-## Phase 2: Report Examples
+**Status:** completed.
 
-*   **Objective**: Provide concrete, illustrative examples of how our evaluation methodologies are applied.
-*   **Deliverables**: Expanded `examples` directory with diverse `sample-eval-case.md`, `sample-behavior-report.md`, and `sample-failure-taxonomy.md` documents.
-*   **Focus**: Demonstrating practical application of evaluation protocols and reporting formats.
+Public materials include:
 
-## Phase 3: Benchmark / Evaluation Artifacts
+- repository overview
+- benchmark scope
+- selected finding notes
+- public-safe report examples
+- bounded case-study materials
 
-*   **Objective**: Release standardized benchmarks and reusable evaluation artifacts to facilitate community engagement.
-*   **Deliverables**: Publicly accessible datasets, scripts, or tools that enable others to replicate or extend our evaluation processes.
-*   **Focus**: Promoting reproducibility and comparative analysis across different LLMs.
+---
 
-## Phase 4: Optional Papers / Public Notes
+## Phase 2: Public-Safe Experiment Reports
 
-*   **Objective**: Share deeper insights and research findings through academic publications or detailed public notes.
-*   **Deliverables**: Peer-reviewed papers, technical reports, or blog posts summarizing key discoveries and advancements in LLM evaluation.
-*   **Focus**: Contributing to the broader scientific understanding of LLM behavior and evaluation best practices in-class evaluation practices.
+**Objective:** publish selected experiment-report summaries that make one observable pattern legible at a time.
+
+Reports may cover:
+
+- confidence–evidence mismatch
+- structured illusion under weak grounding
+- surface legitimacy under authority framing
+- drift or disagreement across repeated outputs
+- collapse behavior under forced grounding
+
+Reports will avoid:
+
+- internal test orchestration
+- private scoring methods
+- full experiment matrices
+- hidden trigger chains
+- reconstruction paths
+
+---
+
+## Phase 3: Cross-Context Observation Notes
+
+**Objective:** compare observable behavior across different interaction contexts without exposing internal systems.
+
+Public notes may distinguish between:
+
+- clean dialogue settings
+- product-like AI system environments
+- report-style outputs
+- authority-framed prompts
+
+The purpose is to describe visible behavior differences, not to disclose how private tests are constructed.
+
+---
+
+## Phase 4: Optional Public Notes or Papers
+
+**Objective:** produce carefully bounded public notes or papers when a pattern becomes stable enough to describe externally.
+
+Public writing should remain:
+
+- descriptive rather than operational
+- pattern-focused rather than system-focused
+- bounded rather than comprehensive
+- non-reconstructive
+
+---
+
+## Standing Boundary
+
+This repository will not include:
+
+- the internal system architecture
+- private control layers
+- proprietary experiment routing
+- scoring weights or thresholds
+- private naming systems where they reveal structure
+- commercial planning or internal deployment logic
+
+---
+
+## Principle
+
+The public layer should show:
+
+> observable behavior patterns
+
+not:
+
+> the machinery used to discover, route, score, or stabilize them

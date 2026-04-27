@@ -1,111 +1,121 @@
 # Model Behavior Observatory
 
-`Bounded Public Benchmark Surface` · `Behavior Under Uncertainty` · `Structured Illusion` · `Public Signals`
+`Public Evaluation Surface` · `Behavior Under Uncertainty` · `Self-Report Reliability` · `Structured Explanation Surfaces`
 
-AI does not only hallucinate isolated facts.
+Language models do not only hallucinate isolated facts.
 
-Under the right framing, it can assemble **credible technical worlds**:
+Under uncertainty, they can assemble outputs that are fluent, structured, and technically plausible before secure grounding has been established.
 
-- systems that seem to exist
+Sometimes this appears as a **system-like surface**:
+
 - documents that seem internal
 - deployment notes that seem operational
 - sources that seem grounded
 - audits that seem verified
+- rules that seem self-explanatory
 
-This repository studies that boundary.
+Sometimes it appears as a **self-report reliability problem**:
 
----
+- the model describes its own limits
+- the description is coherent
+- the description is structured
+- but the reliability of that self-description remains unverified
 
-## 🔴 Latest Study (2026-04-20)
-
-**Miaoxiang AI — System Surface Generation under Authority Framing**
-
-- Surface Layer Study → `docs/studies/miaoxiang-surface-layers.md`
-- Case Report → `docs/reports/miaoxiang-case-report.md`
-- Benchmark v0.1 → `docs/benchmark/miaoxiang-benchmark-v0.1.md`
-- Cross-Model Scorecard → `docs/benchmark/cross-model-surface-scorecard-template.md`
-- Finding Note → `docs/findings/structured-illusion-under-constraint.md`
-
-This study tracks how a model can generate:
-
-- system-like states
-- execution-chain narratives
-- internal documentation surfaces
-- DevOps-style configuration outputs
-- knowledge-base-like sources
-- self-validation (audit-style) outputs
-- collapse under forced grounding constraints
-
-without establishing verified grounding.
+This repository studies those boundaries in a public-safe way.
 
 ---
 
-## What this is
+## What this repository is
 
-A **bounded public benchmark-facing surface** for observing how language models behave when:
+A bounded public evaluation surface for observing how language models behave when:
 
 - input is incomplete
 - grounding is weak
+- uncertainty is high
 - authority framing is introduced
+- self-description is requested
 - technical plausibility begins to outrun verification
 
-It focuses on one practical question:
+It focuses on three practical questions:
 
-> What do models actually do when they should slow down, verify, or stop?
-
-And one harder question beneath it:
+> What do models do when they should slow down, verify, or stop?
 
 > What happens when a model begins to sound more like a system than a model?
 
+> How reliable are a model's own explanations of its behavior and limits?
+
 ---
 
-## Core Observation
+## Current public focus
+
+This repository currently organizes public-safe work around three observable areas.
+
+### 1. Behavior under uncertainty
+
+How models behave when evidence is incomplete, ambiguous, or weakly grounded.
+
+### 2. Structured explanation surfaces
+
+How models generate system-like, documentation-like, source-like, or audit-like outputs that appear more grounded than they are.
+
+### 3. Self-report reliability
+
+How models describe their own limits, rules, uncertainty, and behavioral tendencies — and why such self-descriptions should be treated as behavioral samples rather than mechanism proofs.
+
+---
+
+## Core observation
 
 Many model failures are not simple factual errors.
 
-Some are **structured illusions**:
+Some are structured reliability failures:
 
-> coherent technical outputs that look like real systems, rules, pipelines, deployments, or source-backed environments — even when the model has not established that those structures correspond to reality.
+> coherent outputs that look like real systems, rules, pipelines, deployments, source-backed environments, or self-audits — even when the model has not established that those structures correspond to reality.
 
-This repository tracks those patterns in a public-safe way.
+This repository tracks those patterns without exposing internal control logic or private evaluation procedures.
 
 ---
 
 ## Start here
 
 - `docs/start-here.md`
-- `docs/findings/what-we-found.md`
 - `docs/overview.md`
-- `docs/benchmark-scope.md`
+- `docs/findings/what-we-found.md`
+- `docs/reports/index.md`
+- `docs/reports/llm-self-explanation-rule-spectrum-public-note.md`
 
 ---
 
-## Public Benchmark Scope
+## Public benchmark scope
 
-This repository tracks observable behavioral signals under uncertainty across:
+This repository tracks observable behavioral signals across:
 
-- incomplete input
-- weak grounding
 - confidence–evidence mismatch
-- disagreement and drift
-- policy-expression versus execution behavior
-- authority-surface generation
-- structured illusion under constraint
+- structure outrunning evidence
+- expansion before fabrication
+- pseudo-consistency
+- structure drift
+- incomplete-input continuation
+- source substitution
+- self-validation tendency
+- self-explanation surfaces
+- collapse under forced grounding
 
 ---
 
-## Current Public Signals
+## Current public signals
 
 This public layer highlights recurring behavior patterns such as:
 
 - confidence gap
-- pseudo-consistency
 - structure drift
 - premature legitimacy
 - silence default
 - surface escalation
-- source substitution
 - self-validation tendency
+- self-report reliability gap
+- structured explanation surface
+- boundary redirection
 - collapse under forced grounding
 
 See:
@@ -116,32 +126,34 @@ See:
 
 ---
 
-## System Overview
+## Public evaluation model
 
-This repository treats LLM interaction as a layered control-observation problem:
+This repository treats LLM interaction as a layered observation problem:
 
-- **L1 — Reality Check**: collapse, verification, forced grounding
-- **L2 — Behavior Structure**: templates, attractors, slot filling, surface formation
-- **L3 — Runtime Flow**: drift, repair, escalation, loop behavior
-- **L4 — Control Layer**: bounded protocol and behavioral pressure
-- **L5 — Application Layer**: only outputs that survive lower-layer checks
+- **Grounding**: What evidence supports the output?
+- **Structure**: What framework does the model impose?
+- **Uncertainty**: Where does the model disclose or smooth limits?
+- **Context**: How does the model adapt to user framing and prior interaction?
+- **Boundary**: How does the model behave near constraints?
+- **Self-description**: How does the model explain its own behavior?
 
 Key principle:
 
-> No output is considered valid unless it survives collapse testing at L1.
+> A model self-description is a behavioral sample, not a mechanism proof.
 
 ---
 
-## Use Cases
+## Use cases
 
 This repository is intended to support:
 
 - model behavior comparison
-- report-safe evidence framing
+- public-safe evidence framing
 - external citation
 - bounded benchmark reference
 - structured-illusion detection
-- public-safe discussion of verification gaps
+- self-report reliability discussion
+- public-safe analysis of verification gaps
 
 ---
 
@@ -151,21 +163,21 @@ Most users evaluate AI at the surface level:
 
 > Does this answer sound reasonable?
 
-A harder and often more important question is:
-
-> Should the model have answered at all?
-
-And an even harder one:
+A harder question is:
 
 > Is this answer grounded — or only convincingly shaped?
 
-This repository is built around that distinction.
+A still harder question is:
+
+> When a model explains itself, should that explanation be trusted?
+
+This repository is built around those distinctions.
 
 ---
 
-## Public Scope
+## Public scope
 
-This is a **bounded public layer**.
+This is a bounded public layer.
 
 It is designed to make selected behavior patterns:
 
@@ -187,11 +199,13 @@ without exposing:
 
 ## Navigation
 
+- `docs/start-here.md` — recommended entry point
+- `docs/overview.md` — public evaluation scope
 - `docs/findings/` — observable behavior patterns
 - `docs/reports/` — public-safe analysis notes
 - `docs/studies/` — limited-scope concept notes
 - `docs/benchmark/` — benchmark-facing materials
-- `docs/benchmark-scope.md` — benchmark boundary and signal definition
+- `docs/benchmark-scope.md` — benchmark boundary and signal definitions
 - `docs/forward-path.md` — release discipline and public direction
 - `docs/about.md` — external introduction
 
@@ -215,4 +229,4 @@ Focused on careful, incremental public benchmark release.
 
 This is not a product, framework, or alignment solution.
 
-It is a bounded public benchmark surface for making technical plausibility visible — and separable from verified reality.
+It is a bounded public evaluation surface for making technical plausibility, self-report reliability, and verification gaps easier to see.

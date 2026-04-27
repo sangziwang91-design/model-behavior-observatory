@@ -83,6 +83,7 @@ This repository tracks those patterns without exposing internal control logic or
 - `docs/findings/what-we-found.md`
 - `docs/reports/index.md`
 - `docs/reports/llm-self-explanation-rule-spectrum-public-note.md`
+- `public-kits/llm-stability-eval-kit/` — repeated-prompt testing and pseudo-consistency observation
 
 ---
 
@@ -208,6 +209,7 @@ without exposing:
 - `docs/benchmark-scope.md` — benchmark boundary and signal definitions
 - `docs/forward-path.md` — release discipline and public direction
 - `docs/about.md` — external introduction
+- `public-kits/llm-stability-eval-kit/` — public starter kit for repeated-prompt stability testing
 
 ---
 

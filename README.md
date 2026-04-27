@@ -77,6 +77,7 @@ This repository tracks those patterns in a public-safe way.
 - `docs/findings/what-we-found.md`
 - `docs/overview.md`
 - `docs/benchmark-scope.md`
+- `public-kits/llm-stability-eval-kit/` — repeated-prompt testing and pseudo-consistency observation
 
 ---
 
@@ -194,6 +195,7 @@ without exposing:
 - `docs/benchmark-scope.md` — benchmark boundary and signal definition
 - `docs/forward-path.md` — release discipline and public direction
 - `docs/about.md` — external introduction
+- `public-kits/llm-stability-eval-kit/` — public starter kit for repeated-prompt stability testing
 
 ---
 

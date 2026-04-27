@@ -1,36 +1,131 @@
 # What We Found
 
-This repository is built around one practical observation:
+This repository is built around a core practical observation:
 
-> Models can sound more confident than the evidence supports.
+> Models can sound more certain, structured, and internally consistent than the evidence securely supports.
 
-That does **not** mean every confident answer is wrong.
-It means confidence is a weaker reliability signal than many users assume.
+This is not a claim that models are always wrong.
+
+It is a claim that:
+
+> confidence, structure, and fluency are weaker signals of reliability than many users assume.
+
+---
 
 ## Public findings
 
 ### F1 — Confidence gap
-A model can produce language that sounds settled, structured, and credible even when reliable truth is not securely available.
+
+A model can produce language that appears settled, credible, and technically grounded even when reliable evidence is incomplete or weak.
+
+---
 
 ### F2 — Structure can outrun evidence
-When a topic is framed with enough narrative or methodological structure, the model may begin organizing the topic into a plausible-looking frame before the evidence justifies that move.
 
-### F3 — Expansion often arrives before outright fabrication
-The most important failure mode is not always direct falsehood.
-Often it begins with theory inflation: an unverified topic starts to sound like a legitimate research direction, framework, or mechanism.
+Models tend to organize incomplete or weakly grounded topics into structured frameworks before the available evidence justifies those structures.
+
+---
+
+### F3 — Expansion precedes fabrication
+
+Before producing outright falsehoods, models often expand unverified topics into plausible-looking research directions, frameworks, or mechanisms.
+
+---
 
 ### F4 — Observation, not remediation
-This protocol is designed to expose response behavior.
-It is **not** a patch, defense, or alignment fix.
-Its value is diagnostic visibility.
+
+This repository exposes behavioral patterns.
+It does not attempt to fix or patch them.
+
+---
+
+### F5 — Uncertainty smoothing
+
+Models often soften, generalize, or redistribute uncertainty rather than clearly exposing it.
+
+This can make low-confidence outputs appear more stable than they are.
+
+---
+
+### F6 — Context adaptation
+
+Models adapt to user language, framing, and context.
+
+In extended interaction, this can produce outputs that mirror the user’s conceptual structure rather than independently grounded reasoning.
+
+---
 
 ### F7 — Incomplete input, no halt
-A model may correctly explain that it should stop when task coverage is incomplete — and still continue execution anyway.
-This is a process-level weakness, not just a content error.
+
+A model may correctly identify missing information or incomplete coverage and still continue execution.
+
+This reflects a process-level issue rather than a single content error.
+
+---
+
+### F8 — Structured explanation surface
+
+Models can generate outputs that resemble:
+
+- system documentation
+- internal rules
+- audit reports
+- source-backed explanations
+
+These structures can appear more grounded than they actually are.
+
+---
+
+### F9 — Self-report reliability gap
+
+When asked to describe their own behavior, limits, or rules, models often generate coherent and structured self-explanations.
+
+However:
+
+> such self-descriptions should be treated as behavioral samples, not mechanism proofs.
+
+---
+
+### F10 — Boundary redirection
+
+Instead of stopping at capability or policy limits, models often redirect outputs into safer generalizations, principles, or adjacent explanations.
+
+---
+
+### F11 — Collapse under forced grounding
+
+When required to explicitly ground claims in verifiable evidence, some structured or plausible outputs may partially or fully collapse.
+
+---
 
 ## Why this matters
 
-Most users do not inspect the full path from uncertainty to answer.
-They hear confidence, structure, and fluency — and treat those as rough proxies for reliability.
+Many users evaluate AI outputs through surface signals:
 
-This repository exists to make that shortcut easier to question.
+- fluency
+- structure
+- confidence
+
+But a model can be:
+
+- structured without being grounded
+- coherent without being correct
+- careful-sounding without being well-calibrated
+- self-explanatory without being transparent
+
+This repository exists to make those gaps easier to see.
+
+---
+
+## Reading rule
+
+While reading any output, ask not only:
+
+- "Does this sound reasonable?"
+
+Also ask:
+
+- "Where does secure grounding end?"
+- "What is being assumed or completed?"
+- "Is structure substituting for evidence?"
+- "Is the model explaining itself — and should that explanation be trusted?"

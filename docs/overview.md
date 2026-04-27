@@ -1,29 +1,112 @@
-# Overview: The Public Evaluation Surface
+# Overview: Public Evaluation Surface for LLM Behavior
 
-This repository provides a public **evaluation surface** for Large Language Models (LLMs). The goal is to share our methodologies for observing and analyzing model behavior in a way that is understandable and citable, without exposing the underlying, proprietary **core control layer**.
+This repository provides a bounded public evaluation surface for observing Large Language Model (LLM) behavior under uncertainty.
 
-## Focus Areas
+Its purpose is to make selected behavioral patterns legible, citable, and discussable without exposing private control logic, unreleased protocols, hidden scoring thresholds, trigger chains, or internal evaluation infrastructure.
 
-Our public evaluation efforts are centered on the following observable phenomena:
+## Research focus
 
-- **Model Behavior**: The explicit actions, responses, and patterns that models exhibit.
-- **Drift**: Measurable changes in model behavior over time or across versions.
-- **Disagreement**: Inconsistencies in outputs between different models or model versions for the same input.
-- **Failure Patterns**: Recurring and classifiable types of errors or undesirable behaviors.
+The current public focus is organized around three observable questions.
 
-## Scope and Boundaries
+### 1. Behavior under uncertainty
 
-To set clear expectations, it is important to clarify what this public repository is **not**:
+What does a model do when evidence is incomplete, grounding is weak, or the task should require slowing down?
 
-- **Not a full agent framework**: It does not provide a complete system for building, deploying, or managing AI agents. Its scope is strictly limited to the evaluation of LLM behavior.
-- **Not a private control core**: No internal, proprietary control logic, algorithms, or infrastructure that manage our core AI operations are exposed here.
-- **Not a leaked internal system**: This repository is a deliberate and curated public release, not an accidental disclosure of internal tools or data.
-- **Not a general-purpose prompt pack**: This is not a collection intended for general prompt engineering or optimizing LLM performance across various tasks.
+Relevant public signals include:
 
-Instead, **this is a public-facing evaluation window** designed to foster transparency and collaboration around LLM behavior analysis, drift detection, and failure patterns.
+- confidence–evidence mismatch
+- incomplete-input continuation
+- structure drift
+- pseudo-consistency
+- expansion before fabrication
 
-## Public direction
+### 2. Structured explanation surfaces
 
-For the release discipline and future-facing public path of this repository, see:
+What happens when a model generates outputs that look like systems, internal documents, source-backed environments, audits, rules, or deployment notes without secure grounding?
+
+Relevant public signals include:
+
+- system-like surface generation
+- source substitution
+- self-validation tendency
+- premature legitimacy
+- collapse under forced grounding
+
+### 3. Self-report reliability
+
+How should we evaluate a model's own description of its limits, uncertainty, behavior, or rules?
+
+This repository treats self-description as an observable behavioral sample, not as direct access to internal mechanism.
+
+Key principle:
+
+> A model self-description is a behavioral sample, not a mechanism proof.
+
+## What this repository studies
+
+The repository tracks public-safe patterns such as:
+
+- when confidence exceeds secure evidence
+- when structure outruns grounding
+- when uncertainty is smoothed or generalized
+- when self-audit language appears more reliable than it is
+- when a model generates a coherent explanation of itself
+- when forced grounding collapses a plausible surface
+
+## What this repository is not
+
+This is not:
+
+- a full agent framework
+- a private control core
+- a leaked internal system
+- a prompt pack
+- a universal benchmark
+- a complete reproducibility package
+- an alignment solution
+
+It is a curated public-facing evaluation window for LLM behavior analysis.
+
+## Public disclosure boundary
+
+The repository may disclose:
+
+- public-safe findings
+- compressed reports
+- concept notes
+- observable behavioral signals
+- limited benchmark-facing materials
+- method boundaries and limitations
+
+The repository does not disclose:
+
+- internal control logic
+- hidden scoring weights
+- private trigger structures
+- unreleased protocols
+- reconstruction paths
+- private evaluation pipelines
+
+## Recommended reading path
+
+Start with:
+
+1. `start-here.md`
+2. `findings/what-we-found.md`
+3. `reports/llm-self-explanation-rule-spectrum-public-note.md`
+4. `reports/index.md`
+5. `scope-and-disclosure.md`
+
+## Current public direction
+
+The repository is being developed as a careful public surface for:
+
+- model behavior comparison
+- structured-illusion detection
+- self-report reliability discussion
+- benchmark-facing signal definition
+- external citation of public-safe findings
+
+For release discipline and future-facing public path, see:
 
 - `docs/forward-path.md`

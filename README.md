@@ -25,6 +25,24 @@ This repository studies those boundaries in a public-safe way.
 
 ---
 
+## Zenodo records
+
+Two public Zenodo records are available for citation and external reference:
+
+1. **Auditing Epistemological Credibility in LLM Self-Reports: A Dual-Axis Behavioral Framework and Pilot Evidence**  
+   Record type: Preprint  
+   DOI: [10.5281/zenodo.19879788](https://doi.org/10.5281/zenodo.19879788)
+
+2. **Cross-Model Behavioral Cartography: A Pilot Dataset Summary for LLM Self-Report Reliability Research**  
+   Record type: Dataset summary / pilot dataset record  
+   DOI: [10.5281/zenodo.19881753](https://doi.org/10.5281/zenodo.19881753)
+
+These records are exploratory pilot-level releases. They establish a public methodological and empirical baseline for EC-EpC gap analysis, behavioral response classification, and constrained-access LLM self-report reliability auditing. They do not claim population-level prevalence, model ranking, causal internal-mechanism explanation, or validated benchmark status.
+
+Bounded disclosure applies: exact task inputs, scoring weights, trigger thresholds, intervention templates, and private audit heuristics are not publicly released.
+
+---
+
 ## What this repository is
 
 A bounded public evaluation surface for observing how language models behave when:

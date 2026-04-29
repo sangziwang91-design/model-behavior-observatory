@@ -10,37 +10,49 @@ The order of reasons matters:
 
 ### 1. Reproducibility boundary
 
-A protocol can be described without making every implementation detail replicable.
+A public method can be described without making every internal implementation detail replicable.
 
-Full disclosure of internal structure often leads to shallow replication rather than meaningful verification.
+Full disclosure of private structure often leads to shallow replication rather than meaningful verification.
 
 The goal here is **understandable observation**, not copyable internals.
 
 ### 2. Misuse risk
 
-If the full injection structure, trigger design, and internal thresholds are exposed, the same tools can be used to:
+If full internal prompt structures, trigger design, routing logic, or evaluation thresholds are exposed, similar methods can be used to:
 
 - induce misleading outputs deliberately
 - simulate credibility without evidence
 - game evaluation setups
 
-The protocol is meant to reveal these behaviors, not to amplify them.
+The public material is meant to reveal these behaviors at a high level, not to amplify or operationalize them.
 
-### 3. Commercial protection
+### 3. Commercial and research protection
 
-The work behind this repository includes systems that are not intended to be open-sourced in full.
+Some work behind this repository belongs to private research infrastructure and is not intended to be open-sourced in full.
 
-This is not hidden. It is stated openly so readers can interpret the boundary correctly.
+This is stated openly so readers can interpret the boundary correctly.
 
 ## What is still transparent
 
-Even with these limits, the following are fully visible:
+Even with these limits, the following remain visible:
 
 - the problem framing (confidence vs reliability)
-- the observation protocol (public version)
-- the scoring dimensions and scenario structure
-- the observed patterns and aggregate results
-- the known limits of the method itself
+- the public observation approach
+- high-level evaluation dimensions
+- limited public scenarios
+- observed behavior patterns and aggregate summaries
+- known limitations of the public method
+
+## What is not disclosed
+
+This repository does not publish:
+
+- private scoring weights or thresholds
+- internal control logic
+- trigger chains or routing structures
+- private prompt orchestration
+- full reconstruction paths
+- complete internal evaluation infrastructure
 
 ## How to read this repository correctly
 
@@ -51,5 +63,6 @@ Not as:
 - a complete system
 - a universal benchmark
 - a final authority on model correctness
+- a reproducibility package for private internals
 
-The goal is to make a specific class of behavior visible in a way that others can examine, question, and build on.
+The goal is to make a specific class of behavior visible in a way that others can examine, question, and discuss without exposing the private control layer behind the work.

@@ -1,1 +1,41 @@
-{"$schema":"http://json-schema.org/draft-07/schema#","title":"GBS Public Data Subset Schema","version":"1.0.0","author":"Sangzi Wang","governance":"PUBLIC-PRIVATE-SPLIT","public_fields":{"exp_record":{"description":"One record per EXP session"}},"withheld_fields":{"reason":"Operational security per PUBLIC-PRIVATE-SPLIT governance"}}
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "GBS Public Data Subset Schema",
+  "description": "Defines which fields from internal EXP records are safe for Zenodo/GitHub public release. Governed by PUBLIC-PRIVATE-SPLIT architecture. Internal fields (scoring weights, seed structures, path analyzer thresholds) are excluded.",
+  "version": "1.0.0",
+  "author": "Sangzi Wang · Independent Researcher",
+  "governance": "PUBLIC-PRIVATE-SPLIT v1.0 · bounded disclosure architecture",
+  "public_fields": {
+    "exp_record": {
+      "description": "One record per EXP session",
+      "fields": {
+        "exp_id": {"type": "string", "example": "EXP-050", "public": true, "note": "Use public-safe ID only; do not expose internal parent chain"},
+        "date": {"type": "string", "format": "date", "public": true},
+        "model_family": {"type": "string", "enum": ["claude", "gpt", "gemini", "glm", "kimi", "doubao", "grok", "multi-model"], "public": true, "note": "Family only; do not expose specific version unless publicly known"},
+        "n_rounds": {"type": "integer", "minimum": 1, "public": true},
+        "brc_distribution": {"type": "object", "description": "Count of each BRC class observed in this session", "properties": {"BRC-1": {"type": "integer"}, "BRC-2": {"type": "integer"}, "BRC-3": {"type": "integer"}, "BRC-4": {"type": "integer"}, "BRC-5": {"type": "integer"}, "BRC-6": {"type": "integer"}, "BRC-7": {"type": "integer"}, "BRC-8": {"type": "integer"}}, "public": true},
+        "distortion_D_mean": {"type": "number", "minimum": 0, "maximum": 1, "description": "Mean ABS distortion index across rounds", "public": true, "note": "Publish mean only; do not expose per-round raw values without aggregation"},
+        "distortion_D_variance": {"type": "number", "minimum": 0, "public": true},
+        "evidence_tier": {"type": "string", "enum": ["raw-observation", "behavioral-observation", "cross-model-candidate", "validated-pattern"], "public": true},
+        "dominant_brc": {"type": "integer", "minimum": 1, "maximum": 8, "description": "Most frequent BRC class in this session", "public": true},
+        "protocol_type": {"type": "string", "description": "High-level protocol category used", "enum": ["open-ended", "structured-constraint", "high-entropy", "seed-injection", "multi-model-replication", "evaluation-aware"], "public": true, "note": "Category only; do not expose seed content or injection structure"},
+        "short_finding": {"type": "string", "maxLength": 280, "description": "One-sentence public-safe summary of key finding", "public": true}
+      }
+    },
+    "round_record": {
+      "description": "One record per interaction round within an EXP",
+      "fields": {
+        "exp_id": {"type": "string", "public": true},
+        "round_index": {"type": "integer", "public": true},
+        "brc_class": {"type": "integer", "minimum": 1, "maximum": 8, "public": true},
+        "brc_label": {"type": "string", "public": true},
+        "distortion_D": {"type": "number", "public": true},
+        "severity": {"type": "string", "enum": ["Low", "Moderate", "High", "Critical"], "public": true},
+        "annotator_confidence": {"type": "string", "enum": ["high", "medium", "low"], "public": true}
+      }
+    }
+  },
+  "withheld_fields": {"reason": "Operational security per PUBLIC-PRIVATE-SPLIT governance", "fields": ["seed_content", "seed_injection_structure", "abs_weight_w1_w2_w3", "path_analyzer_thresholds", "internal_exp_parent_chain", "rule_mutation_candidates", "geo_recycle_protocol_detail", "mcf_module_trigger_conditions", "scoring_formula_parameters", "internal_run_log_ids", "province_routing_rules"]},
+  "release_checklist": {"description": "Required checks before any Zenodo/GitHub release", "steps": ["1. Verify all withheld_fields are absent from export", "2. Confirm model_family is family-level only (not specific API version)", "3. Confirm short_finding passes PUBLIC-PRIVATE-SPLIT review", "4. Confirm no EXP page URL points to internal Notion workspace", "5. Confirm distortion_D values are aggregated (mean/variance), not raw per-turn", "6. Assign evidence_tier accurately; do not upgrade raw-observation to validated-pattern", "7. Add DOI anchor to corresponding Zenodo record if applicable"]},
+  "example_public_record": {"exp_id": "EXP-050", "date": "2026-05-07", "model_family": "claude", "n_rounds": 4, "brc_distribution": {"BRC-3": 1, "BRC-6": 1, "BRC-7": 1, "BRC-8": 1}, "distortion_D_mean": 0.1686, "distortion_D_variance": 0.0136, "evidence_tier": "behavioral-observation", "dominant_brc": 3, "protocol_type": "structured-constraint", "short_finding": "Structured constraint protocols induce boundary-aware compliance in early rounds with drift-recovery patterns emerging in mid-session, followed by principled refusal at protocol boundary."}
+}

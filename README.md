@@ -6,6 +6,38 @@
 
 ---
 
+## Public record map
+
+### Foundational behavioral audit and epistemic credibility work
+
+- **Auditing Epistemological Credibility in LLM Self-Reports** — [10.5281/zenodo.19879788](https://doi.org/10.5281/zenodo.19879788)
+- **Cross-Model Behavioral Cartography Dataset** — [10.5281/zenodo.19881753](https://doi.org/10.5281/zenodo.19881753)
+
+### Behavioral governance and interaction ecology
+
+- **Dynamic Rule Spectrum System (DDRS)** — [10.5281/zenodo.20086355](https://doi.org/10.5281/zenodo.20086355)
+- **Interaction Ecology Framework (IEF)** — [10.5281/zenodo.20087158](https://doi.org/10.5281/zenodo.20087158)
+- **Toward ABS-1.1: Constraint-Induced Structural Integrity Metrics** — [10.5281/zenodo.20087587](https://doi.org/10.5281/zenodo.20087587)
+- **Convergence Inertia in Large Language Models** — [10.5281/zenodo.20087809](https://doi.org/10.5281/zenodo.20087809)
+
+### Applied behavioral audit dataset
+
+- **MSI-AUDIT-001: Structured Behavioral Audit Dataset for Medical AI Hallucination** — [10.5281/zenodo.20088014](https://doi.org/10.5281/zenodo.20088014)
+
+---
+
+## Current boundary note
+
+This repository remains a bounded public research surface.
+
+Recent private work extends toward runtime interaction-field validation and controlled internal tooling for prompt routing, audit preparation, and behavioral-observability workflows. These private systems are not open-sourced here.
+
+Public materials in this repository are limited to citable records, public-safe summaries, evidence framing, and methodological boundaries. Private prototypes, prompt-routing logic, intervention templates, scoring thresholds, internal task packs, and unreleased validation workflows are intentionally excluded.
+
+Current claim level: exploratory public research surface. Runtime governance and interaction-field intervention claims require further real-model validation before public technical release.
+
+---
+
 ## Latest public releases
 
 ### May 2026 extension records

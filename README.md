@@ -2,6 +2,8 @@
 
 **A bounded public research surface for LLM self-report reliability, structured behavioral failures, and constrained-access model audit.**
 
+**Personal research homepage:** https://sangziwang91-design.github.io/
+
 `LLM Behavior` · `Self-Report Reliability` · `EC-EpC Gap` · `Structured Illusion` · `Behavioral Cartography` · `Constrained-Access Audit` · `Public-Safe Observability`
 
 ---

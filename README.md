@@ -22,9 +22,15 @@
 - **Toward ABS-1.1: Constraint-Induced Structural Integrity Metrics** — [10.5281/zenodo.20087587](https://doi.org/10.5281/zenodo.20087587)
 - **Convergence Inertia in Large Language Models** — [10.5281/zenodo.20087809](https://doi.org/10.5281/zenodo.20087809)
 
-### Applied behavioral audit dataset
+### Applied behavioral audit and scoring datasets
 
 - **MSI-AUDIT-001: Structured Behavioral Audit Dataset for Medical AI Hallucination** — [10.5281/zenodo.20088014](https://doi.org/10.5281/zenodo.20088014)
+- **GEO-LINE-X: A Cross-Model Behavioral Scoring Dataset for LLM Evaluation Research** — [10.5281/zenodo.20487691](https://doi.org/10.5281/zenodo.20487691)
+
+### Evaluation-environment and behavioral scoring records
+
+- **Adaptive Behavioral Scoring** — [10.5281/zenodo.20337500](https://doi.org/10.5281/zenodo.20337500)
+- **Testing as Environment** — [10.5281/zenodo.20337599](https://doi.org/10.5281/zenodo.20337599)
 
 ---
 
@@ -42,9 +48,21 @@ Current claim level: exploratory public research surface. Runtime governance and
 
 ## Latest public releases
 
+### May 22 – June 1, 2026 records
+
+Three additional public Zenodo records are available:
+
+| Record | Type | DOI | Public role |
+|---|---|---|---|
+| **Adaptive Behavioral Scoring** | Framework / specification | [10.5281/zenodo.20337500](https://doi.org/10.5281/zenodo.20337500) | Output-layer behavioral scoring framework |
+| **Testing as Environment** | Framework / position paper | [10.5281/zenodo.20337599](https://doi.org/10.5281/zenodo.20337599) | Evaluation-environment and epistemic-boundary framing |
+| **GEO-LINE-X** | Dataset | [10.5281/zenodo.20487691](https://doi.org/10.5281/zenodo.20487691) | Cross-model behavioral scoring dataset |
+
+Release note: [`docs/releases/zenodo-2026-05-22-to-06-01.md`](docs/releases/zenodo-2026-05-22-to-06-01.md)
+
 ### May 2026 extension records
 
-Five May 2026 extension records are now available as public-safe Zenodo releases:
+Five May 2026 extension records are available as public-safe Zenodo releases:
 
 | Record | Type | DOI | Public role |
 |---|---|---|---|
@@ -86,14 +104,17 @@ Foundation layer
   EC-EpC gap / Structured Illusion
   Behavioral Cartography
 
-Extension layer
+Interaction and governance layer
   DDRS: rule-layer architecture
   IEF: interaction ecology and lifecycle dynamics
   ABS-1.1: structural integrity and constraint-gain metrics
+  Adaptive Behavioral Scoring: output-layer behavioral scoring framework
+  Testing as Environment: evaluation-environment and epistemic-boundary framing
 
 Evidence / dataset layer
   EXP-047: convergence inertia phase-1 evidence
   MSI-AUDIT-001: medical AI structured-illusion audit dataset
+  GEO-LINE-X: cross-model behavioral scoring dataset
 ```
 
 This architecture is intentionally public-safe. It exposes citable records, concepts, and boundaries without exposing private prompt chains, scoring thresholds, intervention templates, or reverse-engineerable control procedures.
@@ -143,9 +164,9 @@ Cross-model observation of external response patterns under structured audit con
 
 How models generate system-like, documentation-like, source-like, or audit-like outputs that appear more grounded than they are.
 
-### 5. Rule-layer and interaction ecology framing
+### 5. Rule-layer, interaction ecology, and evaluation-environment framing
 
-Public-safe conceptual records describing how rule pressure, interaction context, naming anchors, and lifecycle dynamics may shape observable generation paths. These records are hypothesis-generating and require independent validation.
+Public-safe conceptual records describing how rule pressure, interaction context, naming anchors, lifecycle dynamics, and evaluation environments may shape observable generation paths. These records are hypothesis-generating and require independent validation.
 
 ---
 
@@ -179,7 +200,7 @@ Public materials do **not** include:
 
 ## Claim level
 
-Current public records are exploratory or hypothesis-generating releases.
+Current public records are exploratory, pilot-scale, or hypothesis-generating releases.
 
 They support:
 
@@ -215,13 +236,16 @@ This public layer highlights recurring observable patterns such as:
 - boundary redirection;
 - collapse under forced grounding;
 - protocol-sensitive behavioral shifts;
-- constraint-induced structural retention.
+- constraint-induced structural retention;
+- evaluation-environment sensitivity;
+- cross-model behavioral scoring divergence.
 
 ---
 
 ## Start here
 
 - [`docs/start-here.md`](docs/start-here.md) — recommended entry point
+- [`docs/releases/zenodo-2026-05-22-to-06-01.md`](docs/releases/zenodo-2026-05-22-to-06-01.md) — evaluation-environment and behavioral scoring release note
 - [`docs/releases/zenodo-generative-behavior-series-2026-05.md`](docs/releases/zenodo-generative-behavior-series-2026-05.md) — May 2026 extension release note
 - [`docs/releases/zenodo-ec-epc-2026.md`](docs/releases/zenodo-ec-epc-2026.md) — April 2026 foundation release note
 - [`docs/overview.md`](docs/overview.md) — public evaluation scope
@@ -250,6 +274,14 @@ Wang, S. (2026). *Toward ABS-1.1: A Specification for Constraint-Induced Structu
 Wang, S. (2026). *Convergence Inertia in Large Language Models: Phase-1 Multi-Model Evidence Cluster (EXP-047, R001-R013)*. Zenodo. https://doi.org/10.5281/zenodo.20087809
 
 Wang, S. (2026). *MSI-AUDIT-001: A Structured Behavioral Audit Dataset for Medical AI Hallucination Research*. Zenodo. https://doi.org/10.5281/zenodo.20088014
+
+### May 22 – June 1, 2026 records
+
+Wang, S. (2026). *Adaptive Behavioral Scoring: A Restricted-Access Framework for Measuring Output-Layer Deformation in Large Language Models*. Zenodo. https://doi.org/10.5281/zenodo.20337500
+
+Wang, S. (2026). *Testing as Environment: The EC-EpC Gap Framework for Assessing Epistemic Boundary Alignment in Large Language Models*. Zenodo. https://doi.org/10.5281/zenodo.20337599
+
+Wang, S. (2026). *GEO-LINE-X: A Cross-Model Behavioral Scoring Dataset for LLM Evaluation Research*. Zenodo. https://doi.org/10.5281/zenodo.20487691
 
 ---
 

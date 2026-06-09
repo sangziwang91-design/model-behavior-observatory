@@ -1,8 +1,8 @@
-# AI Agent Runtime Acceptance Framework v0.1
+# AI Agent Runtime Acceptance Framework v0.2
 
 **A practical acceptance framework for evaluating AI coding agents, agentic runtimes, and runtime-gateway products.**
 
-**Status:** Public draft v0.1  
+**Status:** Public draft v0.2  
 **Scope:** AI coding agents, agentic applications, runtime gateways, tool-using LLM systems  
 **Primary use:** Independent evaluation, acceptance testing, audit preparation, evidence-based product review  
 **Claim ceiling:** This is an evaluation framework and report template. It is not an industry standard, certification scheme, legal opinion, or safety guarantee.
@@ -652,7 +652,21 @@ Does the agent generate clean, bounded, non-leaking artifacts?
 - Risk:
 - Score: /5
 
-## 10. Score Summary
+## 10. Evaluation Uncertainty and Evidence Level
+
+- Evidence Level: L0 / L1 / L2 / L3 / L4 / L5
+- Run Count:
+- Repeated-run Variance:
+- Environment Lock:
+- Model Version:
+- Temperature / Seed:
+- Tool / API Snapshot:
+- Judge Method:
+- Judge Calibration:
+- Uncertainty Source:
+- Acceptance Confidence:
+
+## 11. Score Summary
 
 | Dimension | Score | Key Evidence | Main Risk |
 |---|---:|---|---|
@@ -666,7 +680,7 @@ Does the agent generate clean, bounded, non-leaking artifacts?
 | Artifact Hygiene | /5 |  |  |
 | Total | /40 |  |  |
 
-## 11. Final Recommendation
+## 12. Final Recommendation
 
 - Final Verdict:
 - Allowed Scope:
@@ -720,12 +734,102 @@ A serious runtime acceptance report should preserve at least the following evide
 | Artifact listing | Shows what was produced |
 | Secret/path scan | Checks leakage risk |
 | Final score table | Converts evidence into judgment |
+| Evidence level note | Prevents single-run evidence from being overstated |
+| Uncertainty note | Identifies whether variation comes from model, judge, or environment |
 
 Without evidence, the output should be treated as a product impression, not an acceptance result.
 
 ---
 
-## 16. Claim ceiling
+## 16. Evaluation uncertainty and evidence levels
+
+Agent runtime evaluation should not treat a single successful run as stable acceptance.
+
+Unlike traditional software testing, agentic systems may produce different paths, tool calls, intermediate states, or final outputs under similar input conditions. Some variation comes from the model itself. Some comes from the evaluator. Some comes from the runtime environment. A serious acceptance report must state what kind of evidence was collected and how much uncertainty remains.
+
+### 16.1 Evidence levels
+
+| Level | Name | Meaning | Allowed conclusion |
+|---|---|---|---|
+| L0 | Claim only | The system or evaluator only states that the task was completed | No acceptance claim |
+| L1 | Single-run observation | The task ran once and produced an observable result | Qualitative observation only |
+| L2 | Repeated-run observation | The same or equivalent task was run multiple times | Stability can be discussed, but scope remains narrow |
+| L3 | Controlled environment | Model version, temperature/seed, tools, APIs, data snapshots, and runtime conditions were recorded or locked | Scoped acceptance is possible |
+| L4 | Regression comparison | The result was compared against a previous stable version, baseline, or benchmarked run | Version-level acceptance is possible |
+| L5 | Production-observed evidence | The system was observed under real or production-like conditions with monitoring, rollback, and incident records | Operational acceptance may be considered within the observed scope |
+
+Single-run success should not be reported as stable acceptance. It should be reported as L1 evidence.
+
+### 16.2 Main uncertainty sources
+
+| Source | Typical examples | Acceptance risk |
+|---|---|---|
+| Model variation | Temperature, sampling, hidden model version changes, context-length sensitivity | A single result may reflect sampling luck rather than stable capability |
+| Judge variation | LLM-as-Judge bias, position bias, length bias, style bias, human reviewer drift | Scores may reflect evaluator preference rather than task quality |
+| Environment variation | API response changes, search result changes, tool latency, dependency changes, concurrent load | The evaluation may measure environment noise instead of agent capability |
+| Dataset or benchmark contamination | Public benchmark exposure, prompt leakage, repeated examples in context or memory | High scores may reflect memorization rather than runtime competence |
+
+### 16.3 Required uncertainty notes
+
+Every serious runtime acceptance report should record:
+
+```markdown
+### Evaluation Uncertainty
+- Evidence Level: L0 / L1 / L2 / L3 / L4 / L5
+- Run Count:
+- Repeated-run Variance:
+- Environment Locked: Yes / No / Partial
+- Model Version Recorded:
+- Temperature / Seed Recorded:
+- Tool/API Snapshot Used:
+- Judge Method: Rule / LLM-as-Judge / Human / Hybrid
+- Judge Calibration: None / Pairwise / Multi-judge / Human-reviewed
+- Main Uncertainty Source: Model / Judge / Environment / Dataset / Unknown
+- Acceptance Confidence: Low / Medium / High
+```
+
+### 16.4 Judge outputs are signals, not ground truth
+
+LLM-as-Judge results should be treated as evaluative signals, not final truth.
+
+A judge model may prefer longer outputs, earlier-positioned answers, familiar writing styles, or outputs from a similar model family. For high-risk or close-call cases, the report should use at least one of the following safeguards:
+
+- pairwise comparison instead of absolute scoring;
+- randomized answer order;
+- multiple judge models from different model families;
+- human review for disputed or high-risk cases;
+- rule-based checks where exact criteria are available.
+
+### 16.5 Environment locking
+
+When the agent depends on tools, APIs, search, browsers, repositories, files, or external services, the report should specify whether those dependencies were live, mocked, snapshotted, or version-locked.
+
+A runtime result is weaker when the environment cannot be reconstructed.
+
+Examples:
+
+- Live search result without snapshot: weaker evidence.
+- API response recorded with timestamp and payload hash: stronger evidence.
+- Tool response mocked with versioned fixture: stronger evidence for regression testing, but not a substitute for live-environment smoke testing.
+- Model version and decoding settings recorded: stronger evidence than unrecorded model invocation.
+
+### 16.6 From score to decision
+
+A score is not a verdict.
+
+An acceptance decision should specify:
+
+- what operational scope is allowed;
+- what scope is blocked;
+- what uncertainty remains;
+- what evidence level supports the verdict;
+- what condition triggers retest, rollback, or downgrade.
+
+A system with a high score but weak evidence level should not be upgraded beyond the evidence it actually supports.
+
+---
+
+## 17. Claim ceiling
 
 This framework intentionally limits public claims.
 
@@ -746,10 +850,12 @@ Disallowed claims:
 - “A demo result is equivalent to production readiness.”
 - “A prototype is a platform.”
 - “A sandbox test proves real-world safety.”
+- “A single successful run proves stable capability.”
+- “LLM-as-Judge output is ground truth.”
 
 ---
 
-## 17. Example acceptance mapping
+## 18. Example acceptance mapping
 
 | Product behavior | Acceptance concern | Relevant dimensions |
 |---|---|---|
@@ -761,10 +867,12 @@ Disallowed claims:
 | Agent works across cloud and local surfaces | Is handoff traceable? | Runtime Path, Task Lifecycle |
 | Agent coordinates multiple subagents | Is responsibility visible? | Runtime Path, Tool Audit, Failure Mode |
 | Agent reports “done” | Is completion independently verifiable? | Evidence of Completion |
+| Agent passes a benchmark once | Does this represent stable runtime behavior? | Evaluation Uncertainty, Evidence Level |
+| Agent receives a high judge score | Is the judge calibrated and auditable? | Tool Audit, Evidence of Completion, Evaluation Uncertainty |
 
 ---
 
-## 18. What makes this framework different
+## 19. What makes this framework different
 
 Most AI evaluation focuses on the model, benchmark, or final answer.
 
@@ -775,13 +883,14 @@ This framework focuses on the **operational envelope** around the model:
 - what evidence remains,
 - how failure appears,
 - whether recovery is possible,
+- how much uncertainty remains,
 - and what public claim is justified.
 
 The framework is intentionally narrow. It does not attempt to solve all AI governance problems. It provides a concrete inspection layer for agentic systems that are already entering codebases, filesystems, APIs, and organizational workflows.
 
 ---
 
-## 19. Limitations
+## 20. Limitations
 
 - This framework is not a replacement for formal security assessment.
 - It does not certify legal, medical, financial, or safety-critical readiness.
@@ -790,10 +899,11 @@ The framework is intentionally narrow. It does not attempt to solve all AI gover
 - It requires evaluator judgment and evidence discipline.
 - Scores should not be compared across products unless test scope and evidence package are comparable.
 - A high score in a toy environment does not imply production readiness.
+- Evidence level and uncertainty handling do not eliminate risk; they only prevent overstated conclusions.
 
 ---
 
-## 20. References
+## 21. References
 
 - NIST, **AI Risk Management Framework**, 2023.  
   https://www.nist.gov/itl/ai-risk-management-framework
@@ -812,7 +922,7 @@ The framework is intentionally narrow. It does not attempt to solve all AI gover
 
 ---
 
-## 21. Suggested file naming
+## 22. Suggested file naming
 
 For individual reports using this framework:
 
@@ -828,10 +938,14 @@ AI_AGENT_RUNTIME_ACCEPTANCE_REPORT_BaiLongma_v0_1_20260609.md
 
 ---
 
-## 22. License and reuse note
+## 23. License and reuse note
 
 This public draft is intended for review, reuse, adaptation, and critique. When adapting the framework, preserve the distinction between evidence-based acceptance and broad safety certification.
 
 The core principle is simple:
 
 > The more an AI agent can act, the more its runtime must be inspectable.
+
+The v0.2 extension adds a second principle:
+
+> The more stochastic an AI agent is, the more its evidence level must be explicit.

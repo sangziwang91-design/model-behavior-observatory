@@ -22,6 +22,7 @@ Public-facing notes on model behavior, confidence gaps, drift, failure patterns,
 - [Reports Index](reports/index.md)
 - [20-Round A/B Snapshot](reports/20-round-ab-snapshot.md)
 - [Multi-Model Behavioral Response Analysis · Public-Safe Version](reports/multi-model-behavioral-response-analysis-public-safe.md)
+- [External-bank FULL1000 Calibration Note](reports/external-bank-full1000-calibration.md)
 
 ## Boundaries
 

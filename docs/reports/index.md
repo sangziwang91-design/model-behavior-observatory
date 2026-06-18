@@ -26,7 +26,7 @@ Focus:
 - public-safe interpretation without internal scoring exposure
 
 ### External Bank FULL1000 Calibration Note
-A public-safe summary of a 1,000-item external prompt-bank replay used for behavior-category and gate-routing calibration.
+A public-safe summary of a 1,000-item external task-bank replay used for behavior-category and gate-routing calibration.
 
 Focus:
 - aggregate completion and distribution signals

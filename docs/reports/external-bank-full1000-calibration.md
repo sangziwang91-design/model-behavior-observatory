@@ -1,12 +1,12 @@
 # External Bank FULL1000 Calibration Note
 
-A public-safe summary of a 1,000-item external question-bank replay for observable model-behavior calibration.
+A public-safe summary of a 1,000-item external task-bank replay for observable model-behavior calibration.
 
 ---
 
 ## Public-safe summary
 
-This note summarizes a 1,000-item external question-bank calibration run used to test whether externally sourced prompts produce observable differences in behavior-category assignment and gate-level routing.
+This note summarizes a 1,000-item external task-bank calibration run used to test whether externally sourced prompts produce observable differences in behavior-category assignment and gate-level routing.
 
 It is not a raw benchmark release, not a model-ranking report, and not a complete disclosure of internal scoring, routing, seed construction, or intervention logic.
 
@@ -14,9 +14,17 @@ The public role of this page is narrower: to make the aggregate calibration sign
 
 ---
 
+## Label note
+
+BRC labels are used here as bounded, observable behavior-response category labels. They should be read as public-facing output labels, not as claims about hidden model internals.
+
+The page uses the term **final BRC** for the post-processed public label. It should not be treated as identical to a raw score-vector argmax label.
+
+---
+
 ## What was tested
 
-The run used an external question-bank pool as a calibration pressure source.
+The run used an external task-bank pool as a calibration pressure source.
 
 Public-safe aggregate scope:
 
@@ -28,7 +36,7 @@ Public-safe aggregate scope:
 | Row-level parse failures | 0 |
 | Observed final behavior labels | BRC-1 through BRC-8 all appeared |
 
-The raw question set, full row-level logs, scoring thresholds, private seed templates, and routing logic are intentionally not released here.
+The raw task set, full row-level logs, scoring thresholds, private seed templates, and routing logic are intentionally not released here.
 
 ---
 
@@ -75,13 +83,13 @@ The replay suggested that source families mattered.
 
 The strongest public-safe finding was not simply that final behavior labels changed, but that external source groups showed a stronger relationship with gate routing than with final behavior label distribution.
 
-Approximate association summary from offline replay:
+Approximate association summary from offline replay, reported as Cramer's V:
 
-| Relationship | Association signal | Public reading |
+| Relationship | Cramer's V | Public reading |
 |---|---:|---|
-| source group x gate action | 0.506 | strong source-gate effect |
-| final BRC x gate action | 0.322 | moderate behavior-gate relationship |
-| source group x final BRC | 0.166 | visible but weaker source-label relationship |
+| source group × gate action | 0.506 | strong source-gate effect |
+| final BRC × gate action | 0.322 | moderate behavior-gate relationship |
+| source group × final BRC | 0.166 | visible but weaker source-label relationship |
 
 This supports using external source families as calibration pressure sources, especially for gate and validation behavior.
 
@@ -93,7 +101,7 @@ It does not support treating any single source group as a universal behavioral b
 
 The run exposed an important schema issue.
 
-The public-facing label should not be read as a pure raw classifier argmax. In offline replay, a substantial number of rows showed a difference between the final behavior label and the score-vector argmax label.
+The public-facing final label should not be read as a pure raw classifier argmax. In offline replay, a substantial number of rows showed a difference between the final behavior label and the score-vector argmax label.
 
 Future reports should distinguish at least four layers:
 
@@ -112,7 +120,7 @@ This distinction matters because a final label may include post-processing, brid
 
 This run supports five bounded claims:
 
-1. A 1,000-item external question-bank replay can complete as a public-safe calibration surface.
+1. A 1,000-item external task-bank replay can complete as a public-safe calibration surface.
 2. External source families can create measurable differences in gate routing and behavior-label assignment.
 3. Source-aware evaluation is more informative than a single undifferentiated prompt pool.
 4. Rare behavior labels require targeted mining and adaptive sampling.
@@ -140,7 +148,7 @@ The run is useful not because it closes the research line, but because it expose
 The next repair direction is:
 
 ```text
-external question bank
+external task bank
   -> source profile
   -> trigger-feature extraction
   -> seed-template substrate

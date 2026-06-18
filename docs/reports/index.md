@@ -25,6 +25,16 @@ Focus:
 - execution confidence versus boundary honesty
 - public-safe interpretation without internal scoring exposure
 
+### External Bank FULL1000 Calibration Note
+A public-safe summary of a 1,000-item external prompt-bank replay used for behavior-category and gate-routing calibration.
+
+Focus:
+- aggregate completion and distribution signals
+- source-family effects
+- gate-routing calibration
+- interpretation warnings around final labels and score-vector argmax labels
+- no full task-bank release
+
 ## How to read these reports correctly
 
 These pages should be treated as:

@@ -1,5 +1,7 @@
 # Model Behavior Observatory
 
+This repository is the canonical public research repository. Older repositories in this account may be historical archives or legacy prototypes.
+
 **A bounded public research surface for LLM self-report reliability, structured behavioral failures, and constrained-access model audit.**
 
 **Personal research homepage:** https://sangziwang91-design.github.io/

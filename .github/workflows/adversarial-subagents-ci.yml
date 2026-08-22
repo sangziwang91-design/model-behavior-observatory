@@ -33,12 +33,22 @@ jobs:
         working-directory: experiments/adversarial-subagents
         run: |
           python validate.py --config protocol.example.json --cases fixtures/seed_cases.jsonl --attack-bank fixtures/frozen_attack_bank.jsonl --out /tmp/validation_snapshot.json
-          cmp fixtures/validation_snapshot.json /tmp/validation_snapshot.json
+          python - <<'PY'
+          import json
+          with open('fixtures/validation_snapshot.json', encoding='utf-8') as f: expected = json.load(f)
+          with open('/tmp/validation_snapshot.json', encoding='utf-8') as f: actual = json.load(f)
+          assert actual == expected, (actual, expected)
+          PY
       - name: Verify deterministic replay snapshot
         working-directory: experiments/adversarial-subagents
         run: |
           python replay.py --cases fixtures/seed_cases.jsonl --attack-bank fixtures/frozen_attack_bank.jsonl --conditions baseline static_attack single_agent multi_agent_consensus consensus_plus_verifier correction_challenge --out /tmp/replay_snapshot.json
-          cmp fixtures/replay_snapshot.json /tmp/replay_snapshot.json
+          python - <<'PY'
+          import json
+          with open('fixtures/replay_snapshot.json', encoding='utf-8') as f: expected = json.load(f)
+          with open('/tmp/replay_snapshot.json', encoding='utf-8') as f: actual = json.load(f)
+          assert actual == expected, (actual, expected)
+          PY
       - name: Full topology fixture dry-run
         working-directory: experiments/adversarial-subagents
         run: |

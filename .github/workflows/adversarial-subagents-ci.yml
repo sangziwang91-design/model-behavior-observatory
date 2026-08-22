@@ -1,0 +1,25 @@
+name: adversarial-subagents-ci
+
+on:
+  pull_request:
+    paths:
+      - "experiments/adversarial-subagents/**"
+      - ".github/workflows/adversarial-subagents-ci.yml"
+  push:
+    branches:
+      - "exp/adversarial-subagents-v0.1"
+    paths:
+      - "experiments/adversarial-subagents/**"
+      - ".github/workflows/adversarial-subagents-ci.yml"
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run stdlib unit tests
+        working-directory: experiments/adversarial-subagents
+        run: python -m unittest -v test_runner.py

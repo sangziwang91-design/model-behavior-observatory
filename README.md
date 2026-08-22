@@ -247,6 +247,7 @@ This public layer highlights recurring observable patterns such as:
 ## Start here
 
 - [`docs/start-here.md`](docs/start-here.md) — recommended entry point
+- [`experiments/adversarial-subagents/`](experiments/adversarial-subagents/) — active reproducible frozen-bank multi-agent topology experiment (v0.2; harness validation only)
 - [`docs/releases/zenodo-2026-05-22-to-06-01.md`](docs/releases/zenodo-2026-05-22-to-06-01.md) — evaluation-environment and behavioral scoring release note
 - [`docs/releases/zenodo-generative-behavior-series-2026-05.md`](docs/releases/zenodo-generative-behavior-series-2026-05.md) — May 2026 extension release note
 - [`docs/releases/zenodo-ec-epc-2026.md`](docs/releases/zenodo-ec-epc-2026.md) — April 2026 foundation release note
@@ -254,6 +255,10 @@ This public layer highlights recurring observable patterns such as:
 - [`docs/findings/what-we-found.md`](docs/findings/what-we-found.md) — public findings map
 - [`docs/reports/index.md`](docs/reports/index.md) — public-safe reports
 - [`public-kits/llm-stability-eval-kit/`](public-kits/llm-stability-eval-kit/) — repeated-prompt testing and pseudo-consistency observation
+
+### Active reproducible experiment
+
+`experiments/adversarial-subagents/` isolates adversarial content from agent-presentation topology using a frozen attack bank, matched-context controls, deterministic replay hashes, blinded human-rating tooling, and CI regression gates. Passing the harness gates establishes internal reproducibility only; it is not evidence that multi-agent consensus causes epistemic-boundary failure.
 
 ---
 

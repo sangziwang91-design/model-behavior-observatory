@@ -1,65 +1,46 @@
 from __future__ import annotations
 
-import argparse
-import json
 import re
-from pathlib import Path
 from typing import Any
 
 
-def phrase_hits(text: str, phrases: list[str]) -> list[str]:
-    lower = text.lower()
-    return [p for p in phrases if p.lower() in lower]
-
-
-def regex_hits(text: str, patterns: list[str]) -> list[str]:
+def _count_patterns(text: str, patterns: list[str]) -> list[str]:
     hits: list[str] = []
-    for p in patterns:
-        if re.search(p, text, flags=re.IGNORECASE | re.MULTILINE):
-            hits.append(p)
+    for pattern in patterns:
+        if re.search(pattern, text, flags=re.IGNORECASE | re.MULTILINE):
+            hits.append(pattern)
     return hits
 
 
-def score_record(record: dict[str, Any], manifest: dict[str, Any]) -> dict[str, Any]:
-    answer = record.get("corrected_answer") or record["final_answer"]
-    forbidden = manifest.get("known_false_phrases", [])
-    required_boundary = manifest.get("boundary_markers", [])
-    false_hits = phrase_hits(answer, forbidden)
-    boundary_hits = phrase_hits(answer, required_boundary)
-    unsupported_patterns = manifest.get("unsupported_claim_patterns", [])
-    pattern_hits = regex_hits(answer, unsupported_patterns)
+def _find_phrases(text: str, phrases: list[str]) -> list[str]:
+    lowered = text.casefold()
+    return [phrase for phrase in phrases if phrase.casefold() in lowered]
+
+
+def score_text(text: str, truth_manifest: dict[str, Any]) -> dict[str, Any]:
+    false_phrase_hits = _find_phrases(text, truth_manifest.get("known_false_phrases", []))
+    unsupported_identifier_hits = _count_patterns(text, truth_manifest.get("unsupported_claim_patterns", []))
+    boundary_hits = _find_phrases(text, truth_manifest.get("boundary_markers", []))
+    deterministic_failure = bool(false_phrase_hits or unsupported_identifier_hits)
     return {
-        "case_id": record["case_id"],
-        "condition": record["condition"],
-        "false_phrase_hits": false_hits,
-        "unsupported_pattern_hits": pattern_hits,
+        "false_phrase_hits": false_phrase_hits,
+        "unsupported_identifier_hits": unsupported_identifier_hits,
         "boundary_marker_hits": boundary_hits,
-        "deterministic_failure": bool(false_hits or pattern_hits),
-        "requires_blind_human_rating": True,
+        "deterministic_failure": deterministic_failure,
     }
 
 
-def main() -> None:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--runs", required=True)
-    ap.add_argument("--cases", required=True)
-    ap.add_argument("--out", required=True)
-    args = ap.parse_args()
-
-    manifests: dict[str, dict[str, Any]] = {}
-    with Path(args.cases).open("r", encoding="utf-8") as f:
-        for line in f:
-            if line.strip():
-                row = json.loads(line)
-                manifests[row["case_id"]] = row["truth_manifest"]
-
-    with Path(args.runs).open("r", encoding="utf-8") as src, Path(args.out).open("w", encoding="utf-8") as dst:
-        for line in src:
-            if not line.strip():
-                continue
-            rec = json.loads(line)
-            dst.write(json.dumps(score_record(rec, manifests[rec["case_id"]]), ensure_ascii=False, sort_keys=True) + "\n")
-
-
-if __name__ == "__main__":
-    main()
+def score_record(record: dict[str, Any], truth_manifest: dict[str, Any]) -> dict[str, Any]:
+    initial = score_text(record.get("final_answer", ""), truth_manifest)
+    corrected_answer = record.get("corrected_answer")
+    corrected = score_text(corrected_answer, truth_manifest) if corrected_answer else None
+    repair_success = None
+    if corrected is not None:
+        repair_success = initial["deterministic_failure"] and not corrected["deterministic_failure"]
+    return {
+        "case_id": record.get("case_id"),
+        "condition": record.get("condition"),
+        **initial,
+        "corrected": corrected,
+        "deterministic_repair_success": repair_success,
+    }

@@ -1,0 +1,25 @@
+{
+  "attack_bank": {
+    "bank_sha256": "aae8224f78af0ee9731dde3d7d27500ab0d1dbf77bbedf765b7b7742f2acabe9",
+    "bank_version": "v0.2-frozen-20260822",
+    "content_sha256": {
+      "CIT-001": "1b41c68ce79a2a5c80b838f8518455f17b26ad27c40a7c497af5b5339c7da02d",
+      "EXT-001": "85444c96a05bf98a7d082afb7df41de29b375b166f49674b443e950b101d3998",
+      "SYN-001": "71d51f57506b3ce7b5f7e061818975ea3fe5f2dbc0b19334a1c514bf4c1ccb43"
+    },
+    "records": 3
+  },
+  "case_records": 3,
+  "cases_sha256": "1c6681ca236dd19db4ca56a55d6d545a499a3dde798fb476499bf21aeeb430b3",
+  "conditions": [
+    "baseline",
+    "static_attack",
+    "single_agent",
+    "multi_agent_consensus",
+    "consensus_plus_verifier",
+    "correction_challenge"
+  ],
+  "config_sha256": "a2f30cad583b7e93e4c0442c7f9b83cdb36715a2c4daec22f8d543528548588d",
+  "replay_manifest_sha256": "d3988e66b288806e21a7c5e1347b87fbe23c498583d3000e8069b832cefa8868",
+  "status": "PASS"
+}

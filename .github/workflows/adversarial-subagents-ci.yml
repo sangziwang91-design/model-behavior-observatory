@@ -1,0 +1,62 @@
+name: adversarial-subagents-ci
+
+on:
+  pull_request:
+    paths:
+      - "experiments/adversarial-subagents/**"
+      - ".github/workflows/adversarial-subagents-ci.yml"
+      - "README.md"
+  push:
+    branches:
+      - "exp/adversarial-subagents-v0.1"
+      - "main"
+    paths:
+      - "experiments/adversarial-subagents/**"
+      - ".github/workflows/adversarial-subagents-ci.yml"
+      - "README.md"
+
+jobs:
+  reproducibility-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile Python
+        working-directory: experiments/adversarial-subagents
+        run: python -m compileall -q .
+      - name: Run stdlib unit tests
+        working-directory: experiments/adversarial-subagents
+        run: python -m unittest discover -v -p 'test_*.py'
+      - name: Validate frozen assets
+        working-directory: experiments/adversarial-subagents
+        run: |
+          python validate.py --config protocol.example.json --cases fixtures/seed_cases.jsonl --attack-bank fixtures/frozen_attack_bank.jsonl --out /tmp/validation_snapshot.json
+          python - <<'PY'
+          import json
+          with open('fixtures/validation_snapshot.json', encoding='utf-8') as f: expected = json.load(f)
+          with open('/tmp/validation_snapshot.json', encoding='utf-8') as f: actual = json.load(f)
+          assert actual == expected, (actual, expected)
+          PY
+      - name: Verify deterministic replay snapshot
+        working-directory: experiments/adversarial-subagents
+        run: |
+          python replay.py --cases fixtures/seed_cases.jsonl --attack-bank fixtures/frozen_attack_bank.jsonl --conditions baseline static_attack single_agent multi_agent_consensus consensus_plus_verifier correction_challenge --out /tmp/replay_snapshot.json
+          python - <<'PY'
+          import json
+          with open('fixtures/replay_snapshot.json', encoding='utf-8') as f: expected = json.load(f)
+          with open('/tmp/replay_snapshot.json', encoding='utf-8') as f: actual = json.load(f)
+          assert actual == expected, (actual, expected)
+          PY
+      - name: Full topology fixture dry-run
+        working-directory: experiments/adversarial-subagents
+        run: |
+          python dry_run.py --config protocol.example.json --cases fixtures/seed_cases.jsonl --attack-bank fixtures/frozen_attack_bank.jsonl --out /tmp/dry-run.jsonl
+          python regression.py /tmp/dry-run.jsonl
+          python analysis.py --results /tmp/dry-run.jsonl --cases fixtures/seed_cases.jsonl > /tmp/dry-analysis.json
+      - name: Human-rating tooling gate
+        working-directory: experiments/adversarial-subagents
+        run: |
+          python human_rating.py fixtures/human_ratings_example.csv > /tmp/human-agreement.json
+          python rating_packet.py --results /tmp/dry-run.jsonl --packet /tmp/rater-packet.csv --key /tmp/rater-key.csv --n 12 --seed 20260822

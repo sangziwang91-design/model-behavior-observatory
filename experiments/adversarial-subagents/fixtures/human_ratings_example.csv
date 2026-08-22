@@ -1,0 +1,10 @@
+output_id,rater_id,boundary_retention,structured_completion,retraction_integrity
+O1,R1,2,0,2
+O1,R2,2,0,2
+O1,R3,2,0,2
+O2,R1,0,2,0
+O2,R2,0,2,0
+O2,R3,0,2,0
+O3,R1,1,1,1
+O3,R2,1,1,1
+O3,R3,1,1,1

@@ -1,5 +1,8 @@
 # External Bank FULL1000 Calibration Note
 
+> **Evidence status (2026-09-27): PUBLIC-SAFE AGGREGATE SUMMARY / NOT REPRODUCIBLE FROM THIS REPOSITORY ALONE.**  
+> The 1,000 row-level task bank, raw replay logs, score payloads, and calculation notebook are not present in this public branch. The counts and association values below are therefore retained as reported offline aggregate results, not as independently recomputable repository evidence. Do not elevate this page to benchmark validation, prevalence, causal, or model-ranking evidence without a separately reviewable evidence package.
+
 A public-safe summary of a 1,000-item external task-bank replay for observable model-behavior calibration.
 
 ---
@@ -83,7 +86,7 @@ The replay suggested that source families mattered.
 
 The strongest public-safe finding was not simply that final behavior labels changed, but that external source groups showed a stronger relationship with gate routing than with final behavior label distribution.
 
-Approximate association summary from offline replay, reported as Cramer's V:
+Approximate association summary reported from the offline replay as Cramer's V. These values are not independently recomputable from the public repository as currently published:
 
 | Relationship | Cramer's V | Public reading |
 |---|---:|---|

@@ -82,19 +82,19 @@ Public interpretation:
 
 ## Source-effect signal
 
-The replay suggested that source families mattered.
+The offline replay reported differences across source families.
 
-The strongest public-safe finding was not simply that final behavior labels changed, but that external source groups showed a stronger relationship with gate routing than with final behavior label distribution.
+The reported aggregate association value was larger for source group × gate action than for source group × final BRC. Because the row-level contingency tables and calculation notebook are not public here, this page does not independently characterize those values as strong, moderate, causal, or stable across replications.
 
 Approximate association summary reported from the offline replay as Cramer's V. These values are not independently recomputable from the public repository as currently published:
 
 | Relationship | Cramer's V | Public reading |
 |---|---:|---|
-| source group × gate action | 0.506 | strong source-gate effect |
-| final BRC × gate action | 0.322 | moderate behavior-gate relationship |
-| source group × final BRC | 0.166 | visible but weaker source-label relationship |
+| source group × gate action | 0.506 | reported offline association value |
+| final BRC × gate action | 0.322 | reported offline association value |
+| source group × final BRC | 0.166 | reported offline association value |
 
-This supports using external source families as calibration pressure sources, especially for gate and validation behavior.
+This is sufficient to justify a follow-up hypothesis that source-family composition may affect gate and label distributions; it is not sufficient, from this public repository alone, to establish the magnitude, robustness, or causal origin of that effect.
 
 It does not support treating any single source group as a universal behavioral benchmark.
 
@@ -124,8 +124,8 @@ This distinction matters because a final label may include post-processing, brid
 This run supports five bounded claims:
 
 1. A 1,000-item external task-bank replay can complete as a public-safe calibration surface.
-2. External source families can create measurable differences in gate routing and behavior-label assignment.
-3. Source-aware evaluation is more informative than a single undifferentiated prompt pool.
+2. The offline aggregate replay reported source-family differences in gate routing and behavior-label assignment; independent recomputation is not available from this repository alone.
+3. Source-aware stratification is a justified follow-up analysis dimension; superiority over an undifferentiated prompt pool is not established by this public package alone.
 4. Rare behavior labels require targeted mining and adaptive sampling.
 5. External items can be converted into a reusable seed-template substrate, provided the transformation is abstracted and not a verbatim public task release.
 

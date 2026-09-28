@@ -1,6 +1,12 @@
 name: Check FULL1000 public note
 
 on:
+  push:
+    branches:
+      - public/full1000-calibration-report
+    paths:
+      - "docs/reports/external-bank-full1000-calibration.md"
+      - ".github/workflows/full1000-note-check.yml"
   pull_request:
     paths:
       - "docs/reports/external-bank-full1000-calibration.md"

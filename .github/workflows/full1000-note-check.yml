@@ -1,0 +1,64 @@
+name: Check FULL1000 public note
+
+on:
+  pull_request:
+    paths:
+      - "docs/reports/external-bank-full1000-calibration.md"
+      - ".github/workflows/full1000-note-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  note-consistency:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: "3.13"
+      - name: Check public-note internal consistency
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          text = Path("docs/reports/external-bank-full1000-calibration.md").read_text(encoding="utf-8")
+
+          required = [
+              "NOT REPRODUCIBLE FROM THIS REPOSITORY ALONE",
+              "not independently recomputable",
+              "row-level task bank",
+              "calculation notebook",
+          ]
+          for marker in required:
+              assert marker.lower() in text.lower(), f"missing evidence-boundary marker: {marker}"
+
+          forbidden = [
+              "strong source-gate effect",
+              "moderate behavior-gate relationship",
+              "visible but weaker source-label relationship",
+          ]
+          for phrase in forbidden:
+              assert phrase.lower() not in text.lower(), f"unsupported effect-strength label returned: {phrase}"
+
+          brc = {
+              label: int(count)
+              for label, count in re.findall(r"\| (BRC-[1-8]) \| (\d+) \|", text)
+          }
+          assert set(brc) == {f"BRC-{i}" for i in range(1, 9)}, brc
+          assert sum(brc.values()) == 1000, brc
+
+          gates = {
+              label: int(count)
+              for label, count in re.findall(r"\| (HOLD|REVIEW|REJECT) \| (\d+) \|", text)
+          }
+          assert set(gates) == {"HOLD", "REVIEW", "REJECT"}, gates
+          assert sum(gates.values()) == 1000, gates
+
+          values = [float(v) for v in re.findall(r"\| (?:source group × gate action|final BRC × gate action|source group × final BRC) \| ([0-9.]+) \|", text)]
+          assert len(values) == 3, values
+          assert all(0.0 <= v <= 1.0 for v in values), values
+
+          print("PASS: FULL1000 public note is internally consistent at the published aggregate level.")
